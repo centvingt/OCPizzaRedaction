@@ -4,11 +4,29 @@
 - **Client :** OC Pizza
 - **Prestataire :** IT Consulting & Development
 
+## Intentions et objectifs du présent document
+
+Ces spécifications fonctionnelles sont destinées :
+
+1. à assurer à OC Pizza qu’IT Consulting & Development a bien compris ses besoins pour les combler au mieux,
+1. à présenter les solutions fonctionnelles qui guideront les choix de développement et de mise en production du projet.
+
+Ainsi, à la suite de la présentation de ce document, il sera demandé à OC Pizza :
+
+1. de vérifier les informations et les données qui y sont décrites,
+1. et d’approuver les solutions qui y sont présentées.
+
+Dans le cadre des méthodes Agile, ce document devra être mis à jour en fonction de l’évolution du projet, de ses nouvelles données et des nouvelles solutions qui pourraient être mises en œuvre.
+
+Chaque mise à jour de ce document devra être à nouveau vérifiée et approuvée par OC Pizza et IT Consulting & Development.
+
+Les versions successives de ce document seront conservées et versionnées sur ce dépôt GitHub : [Dépôt GitHub des spécifications fonctionnelles du présent projet](https://github.com/centvingt/OCPizzaRedaction).
+
 <!--
-les différents acteurs interagissant avec le futur système ;
-la liste des fonctionnalités ;
-le descriptif des fonctionnalités ;
-le cycle de vie des commandes.
+les différents acteurs interagissant avec le futur système ; -> OK
+la liste des fonctionnalités ; -> en cours (diagramme des cas d’utilisation OK, )
+le descriptif des fonctionnalités ; -> programmé
+le cycle de vie des commandes. -> diagramme d'activité à faire
 
 2-3 personas -> impact mapping -> fonctionnalités par utilisateur
 diagrammes de cas d'utilisation uml, ddd;
@@ -64,12 +82,12 @@ Le nouveau système de gestion doit être mis en production pour l’ouverture d
 
 ## Acteurs
 
-Les acteurs identifiés sont :
+Les acteurs identifiés utilisant le système sont :
 
-1. le client.
-1. le responsable du point de vente,
-1. le livreur,
-1. le pizzaiolo.
+1. le client qui commande une pizza en ligne,
+1. le responsable du point de vente qui traite une commande passée sur place ou par téléphone,
+1. le livreur qui livre une commande à un client,
+1. le pizzaïolo qui prépare une commande.
 
 ### Personas
 
@@ -133,13 +151,13 @@ Les acteurs identifiés sont :
 - **Aisance numérique :** \*----
 - **Citation :** _“Toujours donner le meilleur de moi-même”_
 
+### Impact mapping
+
 ## Interactions
 
 ### Cas d’utilisation
 
-![Cas d’utilisation](./img/use-case-diagram.svg)
-
-### Impact mapping
+![Cas d’utilisation](./img/figure-use-case-diagram.svg)
 
 ### User stories
 
