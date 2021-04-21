@@ -75,7 +75,7 @@ Les acteurs identifiés sont :
 
 #### Lia la cliente
 
-![Lia la cliente](./img/lia_w200.jpg)
+![Lia la cliente](./img/persona-lia_w200.jpg)
 
 - **Identité :**
   - Lia Clément,
@@ -88,24 +88,24 @@ Les acteurs identifiés sont :
 - **Aisance numérique :** \*\*\*\*\*
 - **Citation :** _“Je n’ai pas de temps à perdre”_
 
-#### Karim le gérant
+#### Youssef le gérant
 
-![Karim le gérant](./img/karim_w200.jpg)
+![Youssef le gérant](./img/persona-youssef_w200.jpg)
 
 - **Identité :**
-  - Karim Benkacem,
+  - Youssef Benkacem,
   - 32 ans,
   - Gérant de l’OC Pizza de Paris 19,
   - Marié, un enfant,
   - Montreuil.
-- **Biographie :** Alors qu’ils dévelopaient leur franchise, Franck et Lola ont fait appel à Karim il y a un an et demi quand ils n’ont plus eu le temps de s’occuper de leur pizzeria du nord-est de Paris. Il a su très rapidement reprendre la gestion de ce point de vente dans lequel travaille deux pizzaïolos et trois livreurs.
+- **Biographie :** Alors qu’ils dévelopaient leur franchise, Franck et Lola ont fait appel à Karim il y a un an et demi quand ils n’ont plus eu le temps de s’occuper de leur pizzeria du nord-est de Paris. Il a su très rapidement reprendre la gestion de ce point de vente dans lequel travaillent deux pizzaïolos et trois livreurs.
 - **Matériel informatique :** Un Galaxy S20 et un PC portable Dell.
 - **Aisance numérique :** \*\*\*--
 - **Citation :** _“J’ai toujours un œil sur les performances de mon point de vente”_
 
 #### Thomas le livreur
 
-![Thomas le livreur](./img/thomas_w200.jpg)
+![Thomas le livreur](./img/persona-thomas_w200.jpg)
 
 - **Identité :**
   - Thomas Vogiel,
@@ -120,7 +120,7 @@ Les acteurs identifiés sont :
 
 #### Émelyne la pizzaïola
 
-![Émelyne la pizzaïola](./img/emelyne_w200.jpg)
+![Émelyne la pizzaïola](./img/persona-emelyne_w200.jpg)
 
 - **Identité :**
   - Émelyne Polia,
@@ -139,8 +139,8 @@ Les acteurs identifiés sont :
 
 ![Cas d’utilisation](./img/use-case-diagram.svg)
 
-<!-- #1DA1E1 -->
-
 ### Impact mapping
 
 ### User stories
+
+### UML DDD
