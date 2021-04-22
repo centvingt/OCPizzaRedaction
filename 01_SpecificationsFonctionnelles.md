@@ -6,21 +6,21 @@
 
 ## Intentions et objectifs du présent document
 
-Ces spécifications fonctionnelles sont destinées :
+Ces spécifications fonctionnelles, rédigées à partir du recueil des besoins du client, sont destinées :
 
-1. à assurer à OC Pizza qu’IT Consulting & Development a bien compris ses besoins pour les combler au mieux,
+1. à assurer au client que le prestataire a bien compris ses besoins pour les combler au mieux,
 1. à présenter les solutions fonctionnelles qui guideront les choix de développement et de mise en production du projet.
 
-Ainsi, à la suite de la présentation de ce document, il sera demandé à OC Pizza :
+Ainsi, à la suite de la présentation de ce document, il sera demandé au client :
 
 1. de vérifier les informations et les données qui y sont décrites,
 1. et d’approuver les solutions qui y sont présentées.
 
 Dans le cadre des méthodes Agile, ce document devra être mis à jour en fonction de l’évolution du projet, de ses nouvelles données et des nouvelles solutions qui pourraient être mises en œuvre.
 
-Chaque mise à jour de ce document devra être à nouveau vérifiée et approuvée par OC Pizza et IT Consulting & Development.
+Chaque mise à jour de ce document par le prestataire devra être à nouveau vérifiée et approuvée par le client.
 
-Les versions successives de ce document seront conservées et versionnées sur ce dépôt GitHub : [Dépôt GitHub des spécifications fonctionnelles du présent projet](https://github.com/centvingt/OCPizzaRedaction).
+Les versions successives de ce document seront conservées et versionnées dans ce dépôt GitHub : [Dépôt GitHub des spécifications fonctionnelles du présent projet](https://github.com/centvingt/OCPizzaRedaction).
 
 <!--
 les différents acteurs interagissant avec le futur système ; -> OK
@@ -80,85 +80,44 @@ OC Pizza a besoin d’un nouveau système informatique :
 
 Le nouveau système de gestion doit être mis en production pour l’ouverture des trois nouvelles pizzeria du groupe le 1/11/2021.
 
-## Acteurs
+## Acteurs du système
 
-Les acteurs identifiés utilisant le système sont :
+Les acteurs interagissant avec le système identifiés dans le recueil des besoins sont :
 
 1. le client qui commande une pizza en ligne,
 1. le responsable du point de vente qui traite une commande passée sur place ou par téléphone,
 1. le livreur qui livre une commande à un client,
 1. le pizzaïolo qui prépare une commande.
 
-### Personas
+![Les acteurs du système](./img/figure_system-actors.svg)
 
-#### Lia la cliente
+## Interactions des acteurs avec le système
 
-![Lia la cliente](./img/persona-lia_w200.jpg)
+Le recueil des besoins du client
 
-- **Identité :**
-  - Lia Clément,
-  - 22 ans,
-  - Étudiante en biochimie,
-  - Célibataire,
-  - Paris 20.
-- **Biographie :** Passionnée par les jeux vidéos en ligne, elle commande fréquemment des pizzas chez OC Pizza parce qu’elle n’a que très peu de temps à consacrer à ses besoins vitaux (boire, manger, dormir).
-- **Matériel informatique :** Un PC portable Alienware, un iPhone 12 Pro Max.
-- **Aisance numérique :** \*\*\*\*\*
-- **Citation :** _“Je n’ai pas de temps à perdre”_
+<!-- à rédiger + figures
+### Fonctionnalités explicitement identifiées
 
-#### Youssef le gérant
+![Fonctionnalités explicitement identifiées](./img/figure_explicit-actions.svg)
 
-![Youssef le gérant](./img/persona-youssef_w200.jpg)
+### Fonctionnalités implicitement identifiées
 
-- **Identité :**
-  - Youssef Benkacem,
-  - 32 ans,
-  - Gérant de l’OC Pizza de Paris 19,
-  - Marié, un enfant,
-  - Montreuil.
-- **Biographie :** Alors qu’ils dévelopaient leur franchise, Franck et Lola ont fait appel à Karim il y a un an et demi quand ils n’ont plus eu le temps de s’occuper de leur pizzeria du nord-est de Paris. Il a su très rapidement reprendre la gestion de ce point de vente dans lequel travaillent deux pizzaïolos et trois livreurs.
-- **Matériel informatique :** Un Galaxy S20 et un PC portable Dell.
-- **Aisance numérique :** \*\*\*--
-- **Citation :** _“J’ai toujours un œil sur les performances de mon point de vente”_
+![Fonctionnalités explicitement identifiées](./img/figure_implicit-actions.svg)
 
-#### Thomas le livreur
-
-![Thomas le livreur](./img/persona-thomas_w200.jpg)
-
-- **Identité :**
-  - Thomas Vogiel,
-  - 24 ans,
-  - Livreur de pizza,
-  - En couple,
-  - Paris 18.
-- **Biographie :** Thomas a rejoint l’équipe de l’OC Pizza de l’avenue de Stalingrad il y a six mois. Il s’y sent bien et ne s’ennuie jamais : il y a toujours quelque chose à faire à OC Pizza !
-- **Matériel informatique :** Un Galaxy S8 et une Xbox One 500 Go.
-- **Aisance numérique :** \*\*---
-- **Citation :** _“J’aime vivre à 49.9 à l’heure”_
-
-#### Émelyne la pizzaïola
-
-![Émelyne la pizzaïola](./img/persona-emelyne_w200.jpg)
-
-- **Identité :**
-  - Émelyne Polia,
-  - 35 ans,
-  - Pizzaïola à OC Pizza,
-  - Mariée, deux enfants,
-  - Saint-Mandé.
-- **Biographie :** Après des études d’arts plastiques et avoir occupé plusieurs postes dans la vente de prêt-à-porter dans le quartier du Sentier à Paris, elle est embauchée par Franck et Lola à l’ouverture du premier point de vente d’OC Pizza il y a trois ans dans le 19e arrondissement. Elle a trouvé rapidement sa place dans les cuisine de la pizzeria et elle est essentielle à son bon fonctionnement.
-- **Matériel informatique :** Un smartphone Android vieux de plusieurs années qui ne lui sert qu’à téléphoner.
-- **Aisance numérique :** \*----
-- **Citation :** _“Toujours donner le meilleur de moi-même”_
-
-### Impact mapping
-
-## Interactions
+ -->
 
 ### Cas d’utilisation
 
-![Cas d’utilisation](./img/figure-use-case-diagram.svg)
+![Diagramme de cas d’utilisation](./img/figure_use-case-diagram.svg)
 
 ### User stories
 
-### UML DDD
+<!-- à rédiger -->
+
+### Processus de commande
+
+<!-- ![Diagramme de cas d’utilisation](./img/figure_activity-diagram.svg) -->
+
+### Diagramme de classes
+
+<!-- ![Diagramme de cas d’utilisation](./img/figure_class-diagram.svg) -->

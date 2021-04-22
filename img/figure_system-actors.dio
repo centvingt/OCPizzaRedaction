@@ -1,0 +1,23 @@
+<mxfile>
+    <diagram id="ZDwU52DMAoR-JBrt6ogk" name="Page-1">
+        <mxGraphModel dx="725" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="99" value="Application" style="" parent="0"/>
+                <mxCell id="1" value="Acteurs et actions" parent="0"/>
+                <mxCell id="5" value="&lt;font color=&quot;#1da1e1&quot;&gt;Pizzaïolo&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#1DA1E1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="20" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font color=&quot;#1da1e1&quot;&gt;Livreur&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#006EAF;fontColor=#ffffff;fillColor=none;rotation=0;direction=east;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="20" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font color=&quot;#1da1e1&quot;&gt;Client&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#006EAF;fontColor=#ffffff;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="20" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font color=&quot;#1da1e1&quot;&gt;Responsable &lt;br&gt;du point de vente&lt;br&gt;&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#1DA1E1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="20" width="30" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

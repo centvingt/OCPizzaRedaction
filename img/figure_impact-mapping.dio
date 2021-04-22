@@ -1,0 +1,49 @@
+<mxfile>
+    <diagram id="h84z9Ow4-R_cIX1L-NrE" name="Page-1">
+        <mxGraphModel dx="1058" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#1DA1E1;strokeColor=#1DA1E1;rounded=1;sketch=1;endArrow=open;endFill=0;" edge="1" parent="1" source="3" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;strokeColor=#1DA1E1;fontColor=#1DA1E1;" edge="1" parent="1" source="3" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;strokeColor=#1DA1E1;fontColor=#1DA1E1;" edge="1" parent="1" source="3" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endFill=0;strokeColor=#1DA1E1;fontColor=#1DA1E1;" edge="1" parent="1" source="3" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Être plus efficace dans la &#10;gestion des commandes, &#10;de leur réception à leur &#10;livraison en passant par &#10;leur préparation " style="fontStyle=1;sketch=1;fillColor=none;fontColor=#1DA1E1;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="250" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;font color=&quot;#1da1e1&quot;&gt;&lt;b&gt;OBJECTIF&lt;/b&gt;&lt;br&gt;&lt;i&gt;Pourquoi ?&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="1">
+                    <mxGeometry x="35" y="50" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Lia la &#10;cliente" style="fontStyle=1;sketch=1;fillColor=none;fontColor=#1DA1E1;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="130" width="109" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Youssef &#10;le gérant" style="fontStyle=1;sketch=1;fillColor=none;fontColor=#1DA1E1;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="230" width="109" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Thomas&#10;le livreur" style="fontStyle=1;sketch=1;fillColor=none;fontColor=#1DA1E1;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="320" width="109" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;font color=&quot;#1da1e1&quot;&gt;&lt;b&gt;ACTEURS&lt;/b&gt;&lt;br&gt;&lt;i&gt;Qui ?&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="1">
+                    <mxGeometry x="219.5" y="50" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;font color=&quot;#1da1e1&quot;&gt;&lt;b&gt;IMPACT&lt;/b&gt;&lt;br&gt;&lt;i&gt;Comment ?&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="50" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;font color=&quot;#1da1e1&quot;&gt;&lt;b&gt;LIVRABLES&lt;/b&gt;&lt;br&gt;&lt;i&gt;Quoi ?&lt;/i&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="50" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Émelyne&#10;la pizzaïola" style="fontStyle=1;sketch=1;fillColor=none;fontColor=#1DA1E1;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="410" width="109" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
