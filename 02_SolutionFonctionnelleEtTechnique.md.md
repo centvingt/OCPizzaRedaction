@@ -70,7 +70,7 @@ Pour proposer la solution adaptée aux acteurs du système informatique de gesti
 
 ## Carte d’impact
 
-OC Pizza est ??? et veut être ???. Pour réaliser cet objectif, les acteurs
+OC Pizza est ??? et veut être ???. Pour réaliser cet objectif, les acteurs...
 
 ![Carte d’impact](./img/figure_impact-mapping.svg)
 

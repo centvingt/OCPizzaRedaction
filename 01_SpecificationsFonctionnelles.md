@@ -209,15 +209,55 @@ En analysant ce schéma, nous pouvons déterminer ces récits utilisateur :
 
 #### Cas d’utilisation et récits utilisateur du responsable de point de vente
 
-(À COMPLÉTER)
+<!-- ajouter les cas de modification du statut des commandes -->
+
+Puisqu’il prend les commandes sur place ou au téléphone, les cas d’utilisation du responsable de point de vente généralisent les cas d’utilisation du client. De plus, le responsable de point de vente peut suivre en temps réel les commandes et l’évolution du stock d’ingrédients :
+
+![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-manager.svg)
+
+Les récits utilisateur du responsable de point de vente sont ceux du client, plus ces deux-ci :
+
+> En tant que **responsable de point de vente**, je veux **suivre les commandes en temps réel** pour **gérer le point de vente**
+>
+> En tant que **responsable de point de vente**, je veux **suivre le stock des ingrédient en temps réel** pour **anticiper mes commandes d’ingrédients**
 
 #### Cas d’utilisation et récits utilisateur du livreur
 
-(À COMPLÉTER)
+Après avoir choisi une commande prête à être livrée, le livreur règle le statut de cette commandes à “En livraison”, “Livrée” ou “Annulée”. Il lui faut être authentifié en tant que livreur pour cela :
+
+![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-delivery-man.svg)
+
+Les récits utilisateur du livreur sont :
+
+> En tant que **livreur**, je veux **m’authentifier** pour **suivre les commandes en temps réel**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **suivre les commandes en temps réel** pour **planifier mes livraisons**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “En livraison”** pour **partir la livrer**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Livrée”** pour **mettre terme à la commande**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Annulée”** pour **mettre terme à la commande**
 
 #### Cas d’utilisation et récits utilisateur du pizzaïolo
 
-(À COMPLÉTER)
+Après avoir choisi une commande à préparer, le livreur règle le statut de cette commandes à “En préparation”, “Prête à être livrée” ou “Prête à être retirée”. Il lui faut être authentifié en tant que pizzaïolo pour utiliser ces fonctionnalités :
+
+![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-pizza-maker.svg)
+
+Les récits utilisateur du livreur sont :
+
+> En tant que **pizzaïolo**, je veux **m’authentifier** pour **suivre les commandes en temps réel**
+>
+> En tant que **pizzaïolo authentifié en tant que tel**, je veux **suivre les commandes en temps réel** pour **planifier mes préparations**
+>
+> En tant que **pizzaïolo authentifié en tant que tel**, je veux **passer le statut d’une commande à “En préparation”** pour **la préparer**
+>
+> En tant que **pizzaïolo authentifié en tant que tel**, je veux **passer le statut d’une commande à “Prête à être livrée”** pour **qu’elle soit livrée au client**
+>
+> En tant que **pizzaïolo authentifié en tant que tel**, je veux **passer le statut d’une commande à “Prête à être retirée”** pour **qu’elle soit retirée par le client**
+>
+> En tant que **pizzaïolo authentifié en tant que tel**, je veux **afficher la recette d’une pizza** pour **la préparer rapidement et sans me tromper**
 
 ## Processus de commande
 
@@ -250,7 +290,7 @@ La logique procédurale du processus de commande est tout d’abord décrite ici
 
 ### Diagramme d’activité du processus de commande
 
-Afin de traiter tous les cas de figure d’une commandes, ces scénarios alternatifs sont ajoutés à au scénario nominal décrit plus haut :
+Afin de traiter tous les cas de figure d’une commandes, ces scénarios alternatifs sont ajoutés au scénario nominal décrit plus haut :
 
 1. le client s’authentifie au lieu de créer un compte,
 1. le client choisit le retrait de sa commande sur place,
@@ -259,7 +299,7 @@ Afin de traiter tous les cas de figure d’une commandes, ces scénarios alterna
 1. le client choisit de modifier sa commande,
 1. le client choisit d’annuler sa commande.
 
-Ainsi l’ensemble de ces activités, scénario nominal et scénarios alternatifs compris, est modélisé ainsi :
+L’ensemble de ces activités, scénario nominal et scénarios alternatifs compris, est modélisé ainsi :
 
 ![Diagramme d’activité](./img/figure_activity-diagram-order.svg)
 
