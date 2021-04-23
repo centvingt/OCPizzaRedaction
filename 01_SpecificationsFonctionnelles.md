@@ -209,22 +209,26 @@ En analysant ce schéma, nous pouvons déterminer ces récits utilisateur :
 
 #### Cas d’utilisation et récits utilisateur du responsable de point de vente
 
+(À COMPLÉTER)
+
 #### Cas d’utilisation et récits utilisateur du livreur
 
+(À COMPLÉTER)
+
 #### Cas d’utilisation et récits utilisateur du pizzaïolo
+
+(À COMPLÉTER)
 
 ## Processus de commande
 
 La logique procédurale du processus de commande est tout d’abord décrite ici à partir d’un scénario nominal dans lequel :
 
 1. le client crée un compte au lieu de s’authentifier,
-1. choist de se faire livrer sa commande à domicile au lieu de la retirer dans le point de vente,
-1. choist de payer sa commande en ligne au lieu de la payer à la livraison,
+1. choisir de se faire livrer sa commande à domicile au lieu de la retirer dans le point de vente,
+1. choisir de payer sa commande en ligne au lieu de la payer à la livraison ou dans le point de vente,
 1. ne modifie pas sa commande ni ne l’annule.
 
-Des scénarios alternatifs seront ajoutés à ce scénario nominal pour traiter tous les cas de figure d’une commande.
-
-### Scénario nominal
+### Scénario nominal du processus de commande
 
 1. Le système affiche les pizza réalisables,
 1. Le client ajoute une ou plusieurs pizzas réalisables à la commande,
@@ -237,26 +241,37 @@ Des scénarios alternatifs seront ajoutés à ce scénario nominal pour traiter 
 1. Le client choisit de payer en ligne
 1. Le client effectue son paiement en ligne
 1. Le système crée une nouvelle commande avec le statut “Reçue”
+1. Le système propose au client de modifier ou d’annuler sa commande s’il le souhaite
 1. Le pizzaïolo passe la commande au statut “En préparation”
 1. Le pizzaïolo passe la commande au statut “Prête à être livrée”
 1. Le livreur passe la commande au statut “En livraison”
 1. Le livreur livre la pizza au domicile du client
 1. La commande passe au statut “Livrée”
 
-### Scénarios alternatifs
+### Diagramme d’activité du processus de commande
 
-#### Le client s’authentifie au lieu de créer un compte
+Afin de traiter tous les cas de figure d’une commandes, ces scénarios alternatifs sont ajoutés à au scénario nominal décrit plus haut :
 
-#### Le client choisit le retrait de sa commande sur place
+1. le client s’authentifie au lieu de créer un compte,
+1. le client choisit le retrait de sa commande sur place,
+1. le client choisit le retrait de sa commande sur place et de payer sur place,
+1. le client choisit de payer à la livraison,
+1. le client choisit de modifier sa commande,
+1. le client choisit d’annuler sa commande.
 
-#### Le client choisit le retrait de sa commande sur place et de payer sur place
+Ainsi l’ensemble de ces activités, scénario nominal et scénarios alternatifs compris, est modélisé ainsi :
 
-#### Le client choisit de payer à la livraison
+![Diagramme d’activité](./img/figure_activity-diagram-order.svg)
 
-#### Le client choisit de modifier sa commande
+Il est à noter le traitement du remboursement d’une commande est un besoin qui n’a pas encore été recueilli auprès d’OC Pizza. Il convient de lui demander :
 
-#### Le client choisit d’annuler sa commande
+1. s’il permet ls remboursement de commandes modifiées avec une baisse de prix ou annulées,
+1. si oui, s’il souhaite mettre en place un système d’avoir, ce qui ne manquerait pas d’impliquer du temps et des moyens de développement supplémentaires.
 
-### Diagramme d’activité
+Par ailleurs, il conviendrait qu’OC Pizza nous détaille la procédure qu’elle souhaiteue mettre en place quand une Pizza n’est pas retirée pour une livraison par retrait en point de vente. En effet, il conviendrait que le responsable du point de vente puisse annuler une telle commande mais ce besoin n’a pas été détaillé et des questions se posent :
 
-<!-- ![Diagramme d’activité](./img/figure_activity-diagram.svg) -->
+1. Au bout de combien de temps une commande est-elle considérée comme annulée ?
+1. Devons-nous automatiser cette procédure ?
+1. Devons-nous mettre en place la même procédure d’annulation d’une commande que celle qui est utilisée par le livreur dans le diagramme ci-dessus ?
+
+Nous pourrons compléter le diagramme d’activité ci-dessus quand OC Pizza aura levé nos interrogations.
