@@ -80,10 +80,6 @@ OC Pizza a besoin d’un nouveau système informatique :
 
 Le nouveau système de gestion doit être mis en production pour l’ouverture des trois nouvelles pizzeria du groupe le 1/11/2021.
 
-## Processus de commande
-
-<!-- ![Diagramme de cas d’utilisation](./img/figure_activity-diagram.svg) -->
-
 ## Acteurs du système
 
 Les acteurs interagissant avec le système identifiés dans le recueil des besoins sont :
@@ -216,3 +212,51 @@ En analysant ce schéma, nous pouvons déterminer ces récits utilisateur :
 #### Cas d’utilisation et récits utilisateur du livreur
 
 #### Cas d’utilisation et récits utilisateur du pizzaïolo
+
+## Processus de commande
+
+La logique procédurale du processus de commande est tout d’abord décrite ici à partir d’un scénario nominal dans lequel :
+
+1. le client crée un compte au lieu de s’authentifier,
+1. choist de se faire livrer sa commande à domicile au lieu de la retirer dans le point de vente,
+1. choist de payer sa commande en ligne au lieu de la payer à la livraison,
+1. ne modifie pas sa commande ni ne l’annule.
+
+Des scénarios alternatifs seront ajoutés à ce scénario nominal pour traiter tous les cas de figure d’une commande.
+
+### Scénario nominal
+
+1. Le système affiche les pizza réalisables,
+1. Le client ajoute une ou plusieurs pizzas réalisables à la commande,
+1. Le client valide la commande
+1. Le système propose au client de s’authentifier ou de créer un compte
+1. Le client crée un compte
+1. Le système invite le client à choisir un mode de livraison
+1. Le client choisit de se faire livrer sa commande à son domicile
+1. Le système invite le client à choisir un mode de paiement
+1. Le client choisit de payer en ligne
+1. Le client effectue son paiement en ligne
+1. Le système crée une nouvelle commande avec le statut “Reçue”
+1. Le pizzaïolo passe la commande au statut “En préparation”
+1. Le pizzaïolo passe la commande au statut “Prête à être livrée”
+1. Le livreur passe la commande au statut “En livraison”
+1. Le livreur livre la pizza au domicile du client
+1. La commande passe au statut “Livrée”
+
+### Scénarios alternatifs
+
+#### Le client s’authentifie au lieu de créer un compte
+
+#### Le client choisit le retrait de sa commande sur place
+
+#### Le client choisit le retrait de sa commande sur place et de payer sur place
+
+#### Le client choisit de payer à la livraison
+
+#### Le client choisit de modifier sa commande
+
+#### Le client choisit d’annuler sa commande
+
+### Diagramme d’activité
+
+<!-- ![Diagramme d’activité](./img/figure_activity-diagram.svg) -->

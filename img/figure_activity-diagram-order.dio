@@ -1,9 +1,132 @@
 <mxfile>
     <diagram id="ZDwU52DMAoR-JBrt6ogk" name="Page-1">
-        <mxGraphModel dx="930" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="707" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="99" value="Application" style="" parent="0"/>
+                <mxCell id="138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1DA1E1;" edge="1" parent="99" source="100" target="102">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="" style="ellipse;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="99">
+                    <mxGeometry x="90" y="195" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="" style="ellipse;html=1;shape=endState;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="99">
+                    <mxGeometry x="740" y="1370" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1DA1E1;" edge="1" parent="99" source="102" target="109">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="&lt;font color=&quot;#1da1e1&quot;&gt;Afficher les pizzas &lt;br&gt;réalisables&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="360" y="190" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="&lt;font color=&quot;#1da1e1&quot;&gt;Client&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="160" y="45" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="" style="endArrow=none;html=1;strokeColor=#1DA1E1;" edge="1" parent="99">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="340" y="1991.6666259765625" as="sourcePoint"/>
+                        <mxPoint x="340" y="10" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" value="&lt;font color=&quot;#1da1e1&quot;&gt;Système&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="99">
+                    <mxGeometry x="380" y="95" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1DA1E1;" edge="1" parent="99" source="109" target="142">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="&lt;font color=&quot;#1da1e1&quot;&gt;Ajouter une pizzas &lt;br&gt;réalisables &lt;br&gt;à la commande&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="260" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1DA1E1;" edge="1" parent="99" source="111" target="112">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="&lt;font color=&quot;#1da1e1&quot;&gt;Valider la &lt;br&gt;commande&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="410" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="&lt;font color=&quot;#1da1e1&quot;&gt;S’authentifier ou &lt;br&gt;créer un compte&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="500" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="&lt;font color=&quot;#1da1e1&quot;&gt;Créer un &lt;br&gt;compte&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="630" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="&lt;font color=&quot;#1da1e1&quot;&gt;Choisir un mode&amp;nbsp;&lt;br&gt;de livraison&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="730" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="&lt;font color=&quot;#1da1e1&quot;&gt;Choisir de se faire livrer &lt;br&gt;sa commande à domicile&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="810" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="&lt;font color=&quot;#1da1e1&quot;&gt;Choisir un mode &lt;br&gt;de paiement&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="890" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="&lt;font color=&quot;#1da1e1&quot;&gt;Choisir de payer&lt;br&gt;en ligne&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="60" y="960" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="&lt;font color=&quot;#1da1e1&quot;&gt;Effectuer le paiement&lt;br&gt;en ligne&lt;br&gt;&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="62" y="1033" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="" style="endArrow=none;html=1;strokeColor=#1DA1E1;" edge="1" parent="99">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="10" y="160" as="sourcePoint"/>
+                        <mxPoint x="820" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="122" value="" style="endArrow=none;html=1;strokeColor=#1DA1E1;" edge="1" parent="99">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="510" y="2000.3366259765626" as="sourcePoint"/>
+                        <mxPoint x="510" y="18.67" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" value="&lt;font color=&quot;#1da1e1&quot;&gt;Pizzaïolo&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="570" y="45" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="" style="endArrow=none;html=1;strokeColor=#1DA1E1;" edge="1" parent="99">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="670" y="1991.6666259765625" as="sourcePoint"/>
+                        <mxPoint x="670" y="9.999999999999957" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="125" value="&lt;font color=&quot;#1da1e1&quot;&gt;Livreur&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="740" y="45" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="&lt;font color=&quot;#1da1e1&quot;&gt;Passer la commande au &lt;br&gt;statut “En préparation”&lt;br&gt;&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="520" y="1033" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="&lt;font color=&quot;#1da1e1&quot;&gt;Passer la commande au &lt;br&gt;statut “Prête à être livrée”&lt;br&gt;&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="520" y="1140" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="&lt;font color=&quot;#1da1e1&quot;&gt;Passer la commande au &lt;br&gt;statut “En livraison”&lt;br&gt;&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="680" y="1140" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="&lt;font color=&quot;#1da1e1&quot;&gt;Livrer la &lt;br&gt;commande&lt;br&gt;&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="685" y="1220" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="&lt;font color=&quot;#1da1e1&quot;&gt;Passer la commande au &lt;br&gt;statut “Livrée”&lt;br&gt;&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="680" y="1290" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="&lt;span style=&quot;color: rgb(29 , 161 , 225)&quot;&gt;Créer une nouvelle &lt;br&gt;commande&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(29 , 161 , 225)&quot;&gt;avec &lt;br&gt;le statut “Reçue”&lt;/span&gt;&lt;font color=&quot;#1da1e1&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="320" y="1023" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="" style="rhombus;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="110" y="560" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1DA1E1;" edge="1" parent="99" source="142" target="111">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeColor=#1DA1E1;" edge="1" parent="99" source="151" target="102">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="" style="rhombus;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="115" y="350" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="&lt;font color=&quot;#1da1e1&quot;&gt;Ajouter une pizzas &lt;br&gt;supplémentaire&amp;nbsp;&lt;br&gt;à la commande&lt;/font&gt;" style="html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;strokeColor=#1DA1E1;fillColor=none;" vertex="1" parent="99">
+                    <mxGeometry x="180" y="340" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1DA1E1;" edge="1" parent="99" source="142" target="151">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="145" y="365" as="sourcePoint"/>
+                        <mxPoint x="465" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="1" value="Acteurs et actions" parent="0"/>
             </root>
         </mxGraphModel>
