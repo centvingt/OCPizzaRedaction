@@ -23,8 +23,8 @@ Chaque mise à jour de ce document par le prestataire devra être à nouveau vé
 Les versions successives de ce document seront conservées et versionnées dans ce dépôt GitHub : [Dépôt GitHub des spécifications fonctionnelles du présent projet](https://github.com/centvingt/OCPizzaRedaction).
 
 <!--
-les différents acteurs interagissant avec le futur système ; -> OK
-la liste des fonctionnalités ; -> en cours (diagramme des cas d’utilisation OK, )
+les différents acteurs interagissant avec le futur système ;
+la liste des fonctionnalités ;
 le descriptif des fonctionnalités ; -> programmé
 le cycle de vie des commandes. -> diagramme d'activité à faire
 
@@ -80,6 +80,10 @@ OC Pizza a besoin d’un nouveau système informatique :
 
 Le nouveau système de gestion doit être mis en production pour l’ouverture des trois nouvelles pizzeria du groupe le 1/11/2021.
 
+## Processus de commande
+
+<!-- ![Diagramme de cas d’utilisation](./img/figure_activity-diagram.svg) -->
+
 ## Acteurs du système
 
 Les acteurs interagissant avec le système identifiés dans le recueil des besoins sont :
@@ -93,31 +97,122 @@ Les acteurs interagissant avec le système identifiés dans le recueil des besoi
 
 ## Interactions des acteurs avec le système
 
-Le recueil des besoins du client
+La lecture du recueil des besoins du client permet d’identifier :
 
-<!-- à rédiger + figures
-### Fonctionnalités explicitement identifiées
+1. des fonctionnalités explicitement demandées par le client, nommées ci-dessous les _fonctionnalités explicites_,
+1. des fonctionnalités implicitement nécessaires au systèmes, ommées ci-dessous les _fonctionnalités implicites_,
 
-![Fonctionnalités explicitement identifiées](./img/figure_explicit-actions.svg)
+### Fonctionnalités explicites
 
-### Fonctionnalités implicitement identifiées
+Ces fonctionnalités figurent clairemnt dans le recueil des besoins du client :
 
-![Fonctionnalités explicitement identifiées](./img/figure_implicit-actions.svg)
+- Suivre en temps réel le statut des commandes
+- Suivre en temps réel le stock d’ingrédients restant
+- Savoir quelles pizzas peuvent encore être réalisées
+- Passer une commande
+- Payer une commande en ligne
+- Payer une commande à la livraison
+- Modifier une commande
+- Annuler une commande
+- Afficher la recette d’une pizza
 
- -->
+![Fonctionnalités explicites](./img/figure_explicit-actions.svg)
 
-### Cas d’utilisation
+### Fonctionnalités implicites
 
-![Diagramme de cas d’utilisation](./img/figure_use-case-diagram.svg)
+#### Fonctionnalités liées au status d’une commande
 
-### User stories
+Suivre le statut en temps réel des commandes reçues, en préparation et en livraison implique de modifier ce status. Par ailleurs, il est nécessaire à la bonne efficacité du système d’ajouter plusieurs statuts en plus des statuts _Reçue_, _En préparation_ et _En livraison_ :
 
-<!-- à rédiger -->
+- Modifier le status d’une commande :
+  - Régler le statut d’une commande à “Reçue”
+  - Régler le statut d’une commande à “En préparation”
+  - Régler le statut d’une commande à “Prête à être livrée”
+  - Régler le statut d’une commande à “Prête à être retirée”
+  - Régler le statut d’une commande à “En livraison”
+  - Régler le statut d’une commande à “Livrée”
+  - Régler le statut d’une commande à “Retirée”
+  - Régler le statut d’une commande à “Annulée”
 
-### Processus de commande
+![Fonctionnalités liées au status d’une commande](./img/figure_implicit-actions-order-status.svg)
 
-<!-- ![Diagramme de cas d’utilisation](./img/figure_activity-diagram.svg) -->
+#### Fonctionnalité liée au suivi stock d’ingrédients
 
-### Diagramme de classes
+Pour suivre en temps réel le stock d’ingrédients restant, il faut que le système puisse mettre à jour ce stock :
 
-<!-- ![Diagramme de cas d’utilisation](./img/figure_class-diagram.svg) -->
+- Mettre à jour le stock d’ingrédients restant
+
+Cette action devra être déclenchée :
+
+1. à la réception de chaque commande,
+1. à la modification ou l’annulation d’une commande si sa préparation n’a pas commencé.
+
+![Fonctionnalité liée au stock d’ingrédients](./img/figure_implicit-actions-update-stock.svg)
+
+#### Fonctionnalités liées au paiement
+
+Pour payer une commande en ligne, à la livraison ou dans le point de vente, il est nécessaire que ces trois actions généralisent l’action de payer une commande :
+
+- Payer une commande :
+  - Payer une commande en ligne
+  - Payer une commande à la livraison
+  - Payer une commande sur place
+
+![Fonctionnalités liées au paiement](./img/figure_implicit-actions-payment.svg)
+
+#### Fonctionnalités liées à la livraison
+
+Pour choisir la livraison de la commande ou son retrait sur place, ces actions sont nécessaires :
+
+- Choisir le mode de livraison de la commande :
+  - Choisir la livraison de la commande à domicile
+  - Choisir le retrait de la commande sur place
+
+![Fonctionnalités liées à la livraison](./img/figure_implicit-actions-delivery.svg)
+
+#### Fonctionnalités liées à l’authentification
+
+Les acteurs devront s’authentifier pour commander une pizza, suivre les commandes, vérifier les stocks, etc. Cela nécessite donc les actions suivantes :
+
+- Créer un compte
+- S’authentifier
+
+![Fonctionnalités liées à l’authentification](./img/figure_implicit-actions-account.svg)
+
+### Cas d’utilisation et récits utilisateur
+
+#### Cas d’utilisation et récits utilisateur du client
+
+Les cas d’utilisation du système par le client sont les suivants :
+
+![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-customer.svg)
+
+En analysant ce schéma, nous pouvons déterminer ces récits utilisateur :
+
+> En tant que **client,** je veux **passer une commande** pour **obtenir cette commande**
+>
+> En tant que **client non authentifé,** je veux **m’authentifier** pour **passer une commande**
+>
+> En tant que **client non authentifé,** je veux **m’authentifier** pour **modifier une commande**
+>
+> En tant que **client non authentifé,** je veux **m’authentifier** pour **annuler une commande**
+>
+> En tant que **client sans compte,** je veux **créer un compte** pour **m’authentifier**
+>
+> En tant que **client authentifié passant une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **passer une commande**
+>
+> En tant que **client authentifié,** je veux **choisir un paiement en ligne** pour **passer une commande**
+>
+> En tant que **client authentifié passant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **passer une commande**
+>
+> En tant que **client authentifié,** je veux **choisir une livraison à domicile** pour **passer une commande**
+>
+> En tant que **client authentifié,** je veux **choisir un retrait sur place** pour **passer une commande**
+>
+> En tant que **client**, je veux **savoir quelles pizzas peuvent encore être réalisées** pour **passer une commande**
+
+#### Cas d’utilisation et récits utilisateur du responsable de point de vente
+
+#### Cas d’utilisation et récits utilisateur du livreur
+
+#### Cas d’utilisation et récits utilisateur du pizzaïolo

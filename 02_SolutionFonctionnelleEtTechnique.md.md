@@ -6,6 +6,8 @@
 
 ## Personas
 
+Pour proposer la solution adaptée aux acteurs du système informatique de gestion des pizzerias d’OC Pizza qui sera mis en place et pour répondre au mieux aux besoin de ces cibles, voici quatre personas personifiant ces acteurs.
+
 ### Lia la cliente
 
 ![Lia la cliente](./img/persona_lia_w200.jpg)
@@ -68,4 +70,8 @@
 
 ## Carte d’impact
 
+OC Pizza est ??? et veut être ???. Pour réaliser cet objectif, les acteurs
+
 ![Carte d’impact](./img/figure_impact-mapping.svg)
+
+## Solution technique
