@@ -76,6 +76,8 @@ OC Pizza est en plein essor et veut souhaite se doter d’un système de gestion
 
 ## Solution technique
 
+### Backend
+
 Nous proposons de limiter le back-end à une simple API Rest JSON ou GraphQL :
 
 1. pour minimiser les temps de réponse du serveur,
@@ -87,3 +89,14 @@ Le travail qu’aurait effectué le _backend_ avec une _stack_ conventionnelle c
 La _stack_ que nous proposons (appelée _JAMStack_) permettra en plus de ces avantages d’utiliser tel quel le _backend_ pour des applications iOS et Android, pour _smartphones_ et tablettes.
 
 En effet, la carte d’impact ci-dessus révèle que le choix des applications mobile et tactile devrait être fait rapidement si le groupe OC Pizza poursuivait sa croissance. IT Consulting & Development pourrait d’ailleurs accompagner OC Pizza dans le développement de telles application en parallèle de son nouveau site internet si OC Pizza le souhaite.
+
+À cette API Rest, il conviendra d’adjoindre un service web traitant les _websockets_ nécessaires à la mises à jour en temps réel de l’interface utilisateur du client.
+
+### Frontend
+
+Nous proposons pour en _frontend_ d’utiliser React pour optimiser le temps de développement au cas où OC Pizza décide d’adopter une stratégie digitale mobile. En effet, nous pourrions développer ces applications mobile avec la librairie React Native et réutiliser des composants et des logiques de développement similaires à ceux du site internet.
+
+### Frameworks
+
+Pour développer plus rapidement le _backend_ et lui assurer une meilleure maintenabilité, nous pourrions utiliser un _headless CMS_ tel que Strapi.
+Pour le site internet, nous pourrions utiliser le _framework_ Gatsby
