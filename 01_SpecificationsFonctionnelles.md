@@ -333,11 +333,11 @@ Les récits utilisateur spécifiques au responsable du groupe OC Pizza sont :
 
 ## Processus de commande
 
-La logique procédurale du processus de commande est tout d’abord décrite ici à partir d’un scénario nominal dans lequel :
+La logique procédurale du processus de commande est tout d’abord décrite ici à partir d’un scénario nominal dans lequel le client :
 
-1. le client crée un compte au lieu de s’authentifier,
-1. choisir de se faire livrer sa commande à domicile au lieu de la retirer dans le point de vente,
-1. choisir de payer sa commande en ligne au lieu de la payer à la livraison ou dans le point de vente,
+1. crée un compte avant de se connecter ,
+1. choisit de se faire livrer sa commande à domicile au lieu de la retirer dans le point de vente,
+1. choisit de payer sa commande en ligne au lieu de la payer à la livraison ou dans le point de vente,
 1. ne modifie pas sa commande ni ne l’annule.
 
 ### Scénario nominal du processus de commande
@@ -355,7 +355,7 @@ La logique procédurale du processus de commande est tout d’abord décrite ici
 1. Le système crée une nouvelle commande avec le statut “Reçue”
 1. Le système propose au client de modifier ou d’annuler sa commande s’il le souhaite
 1. Le pizzaïolo passe la commande au statut “En préparation”
-1. Le pizzaïolo passe la commande au statut “Prête à être livrée”
+1. Le pizzaïolo passe la commande au statut “Prête”
 1. Le livreur passe la commande au statut “En livraison”
 1. Le livreur livre la pizza au domicile du client
 1. La commande passe au statut “Livrée”
@@ -364,7 +364,7 @@ La logique procédurale du processus de commande est tout d’abord décrite ici
 
 Afin de traiter tous les cas de figure d’une commandes, ces scénarios alternatifs sont ajoutés au scénario nominal décrit plus haut :
 
-1. le client s’authentifie au lieu de créer un compte,
+1. le client se connecte sans avoir besoin de créer un compte,
 1. le client choisit le retrait de sa commande sur place,
 1. le client choisit le retrait de sa commande sur place et de payer sur place,
 1. le client choisit de payer à la livraison,
@@ -374,16 +374,3 @@ Afin de traiter tous les cas de figure d’une commandes, ces scénarios alterna
 L’ensemble de ces activités, scénario nominal et scénarios alternatifs compris, est modélisé ainsi :
 
 ![Diagramme d’activité](./img/figure_activity-diagram-order.svg)
-
-Il est à noter le traitement du remboursement d’une commande est un besoin qui n’a pas encore été recueilli auprès d’OC Pizza. Il convient de lui demander :
-
-1. s’il permet ls remboursement de commandes modifiées avec une baisse de prix ou annulées,
-1. si oui, s’il souhaite mettre en place un système d’avoir, ce qui ne manquerait pas d’impliquer du temps et des moyens de développement supplémentaires.
-
-Par ailleurs, il conviendrait qu’OC Pizza nous détaille la procédure qu’elle souhaiteue mettre en place quand une Pizza n’est pas retirée pour une livraison par retrait en point de vente. En effet, il conviendrait que le responsable du point de vente puisse annuler une telle commande mais ce besoin n’a pas été détaillé et des questions se posent :
-
-1. Au bout de combien de temps une commande est-elle considérée comme annulée ?
-1. Devons-nous automatiser cette procédure ?
-1. Devons-nous mettre en place la même procédure d’annulation d’une commande que celle qui est utilisée par le livreur dans le diagramme ci-dessus ?
-
-Nous pourrons compléter le diagramme d’activité ci-dessus quand OC Pizza aura levé nos interrogations.
