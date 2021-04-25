@@ -55,20 +55,16 @@ Le nouveau système de gestion doit être mis en production pour l’ouverture d
 
 Les acteurs interagissant avec le système identifiés explicitement dans le recueil des besoins sont :
 
-1. le client qui commande une pizza en ligne,
+1. le client qui consulte la carte et commande une pizza en ligne,
 1. le responsable d’OC Pizza qui gère les pizzérias du groupe,
 1. le pizzaïolo qui prépare une commande,
 1. le livreur qui livre une commande à un client.
 
-Par ailleurs, il est implicite :
-
-1. que le système a besoin d’un visiteur, un acteur qui visite le site internet et pourra devenir un client s’il souhaite commander,
-1. que le livreur et le pizzaïolo peuvent être amenés à traiter les commandes passées sur place ou par téléphone,
+Par ailleurs, il est implicite que le livreur et le pizzaïolo peuvent être amenés à traiter les commandes passées sur place ou par téléphone.
 
 Les acteurs du système sont donc :
 
-1. le visiteur,
-1. le client qui généralise les cas d’utilisation du visiteur,
+1. le client,
 1. le responsable,
 1. l’employé,
 1. le pizzaïolo qui généralise les cas d’utilisation de l’employé,
@@ -101,7 +97,7 @@ Ces fonctionnalités figurent clairemnt dans le recueil des besoins du client :
 
 ### Fonctionnalités implicites
 
-#### Fonctionnalités liées au status d’une commande
+#### Fonctionnalités liées au statut d’une commande
 
 Suivre le statut en temps réel des commandes reçues, en préparation et en livraison implique de modifier ce status. Par ailleurs, il est nécessaire à la bonne efficacité du système d’ajouter plusieurs statuts en plus des statuts _Reçue_, _En préparation_ et _En livraison_ :
 
@@ -131,12 +127,23 @@ Cette action devra être déclenchée :
 
 #### Fonctionnalités liées au paiement
 
+Il est tout d’abord nécessaire de choisir le mode de paiement :
+
+- Choisir un mode de paiement :
+  - Choisir un paiement en ligne
+  - Choisir un paiement à la livraison
+  - Choisir un paiement sur place
+
 Pour payer une commande en ligne, à la livraison ou dans le point de vente, il est nécessaire que ces trois actions généralisent l’action de payer une commande :
 
 - Payer une commande :
   - Payer une commande en ligne
   - Payer une commande à la livraison
   - Payer une commande sur place
+
+Enfin, il nécessaire d’enregistrer le paiement de la commande :
+
+- Encaisser une commande
 
 ![Fonctionnalités liées au paiement](./img/figure_implicit-actions-payment.svg)
 
@@ -147,6 +154,10 @@ Pour choisir la livraison de la commande ou son retrait sur place, ces actions s
 - Choisir le mode de livraison de la commande :
   - Choisir la livraison de la commande à domicile
   - Choisir le retrait de la commande sur place
+
+L’action de délivrer une commande est aussi nécessaire :
+
+- Délivrer une commande
 
 ![Fonctionnalités liées à la livraison](./img/figure_implicit-actions-delivery.svg)
 
@@ -161,6 +172,11 @@ Les acteurs devront se connecter au système pour commander une pizza, suivre le
     - Créer un compte “Livreur”
   - Créer un compte “Responsable”
 - Se connecter
+- Se déconnecter
+- Supprimer un compte “Client”
+- Supprimer un compte “Pizzaïolo”
+- Supprimer un compte “Livreur”
+- Supprimer un compte “Responsable”
 
 ![Fonctionnalités liées à l’authentification](./img/figure_implicit-actions-account.svg)
 
@@ -175,77 +191,99 @@ Les responsables du groupe OC Pizza doivent pouvoir :
 
 ### Cas d’utilisation et récits utilisateur
 
-#### Cas d’utilisation et récits utilisateur du client
+#### Cas d’utilisation et récits utilisateur du visiteur et du client
 
-Les cas d’utilisation du système par le client sont les suivants :
+Les cas d’utilisation du système par le visiteur et le client sont les suivants :
 
 ![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-customer.svg)
 
 En analysant ce schéma, nous pouvons déterminer ces récits utilisateur :
 
-> En tant que **client,** je veux **passer une commande** pour **obtenir cette commande**
+> En tant que **client non connecter,** je veux **savoir quelles pizzas peuvent encore être réalisées** pour **passer une commande**
 >
-> En tant que **client non authentifé,** je veux **m’authentifier** pour **passer une commande**
+> En tant que **client non connecté,** je veux **me connecter** pour **passer une commande**
 >
-> En tant que **client non authentifé,** je veux **m’authentifier** pour **modifier une commande**
+> En tant que **client non connecté,** je veux **créer un compte client** pour **me connecter**
 >
-> En tant que **client non authentifé,** je veux **m’authentifier** pour **annuler une commande**
+> En tant que **client connecté,** je veux **passer une commande** pour **retirer cette commande au point de vente**
 >
-> En tant que **client sans compte,** je veux **créer un compte** pour **m’authentifier**
+> En tant que **client connecté,** je veux **passer une commande** pour **me la faire livrer**
 >
-> En tant que **client authentifié passant une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **passer une commande**
+> En tant que **client non connecter,** je veux **me connecter** pour **modifier une commande**
 >
-> En tant que **client authentifié,** je veux **choisir un paiement en ligne** pour **passer une commande**
+> En tant que **client non connecté,** je veux **me connecter** pour **annuler une commande**
 >
-> En tant que **client authentifié passant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **passer une commande**
+> En tant que **client connecté passant une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **passer une commande**
 >
-> En tant que **client authentifié,** je veux **choisir une livraison à domicile** pour **passer une commande**
+> En tant que **client connecté,** je veux **choisir un paiement en ligne** pour **passer une commande**
 >
-> En tant que **client authentifié,** je veux **choisir un retrait sur place** pour **passer une commande**
+> En tant que **client connecté passant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **passer une commande**
 >
-> En tant que **client**, je veux **savoir quelles pizzas peuvent encore être réalisées** pour **passer une commande**
+> En tant que **client connecté,** je veux **choisir une livraison à domicile** pour **retirer ma commande**
+>
+> En tant que **client connecté,** je veux **choisir un retrait sur place** pour **retirer ma commande**
+>
+> En tant que **client non connecté,** je veux **me connecter** pour **supprimer mon compte client**
+>
+> En tant que **client connecté,** je veux **choisir un paiement en ligne** pour **payer ma commande**
+>
+> En tant que **client connecté passant une commande avec un retrait sur place,** je veux **choisir un paiemnet sur place** pour **payer ma commande**
+>
+> En tant que **client connecté passant une commande à la livraison,** je veux **choisir paiement à la livraison** pour **payer ma commande**
 
-#### Cas d’utilisation et récits utilisateur du responsable de point de vente
+#### Cas d’utilisation et récits utilisateur de l’employé
 
-<!-- ajouter les cas de modification du statut des commandes -->
+L’employé de la pizzéria prend les commande du client passées sur place ou par téléphone :
 
-Puisqu’il prend les commandes sur place ou au téléphone, les cas d’utilisation du responsable de point de vente généralisent les cas d’utilisation du client. De plus, le responsable de point de vente peut suivre en temps réel les commandes et l’évolution du stock d’ingrédients :
+![Cas d’utilisation de l’employé](./img/figure_use-case-diagram-employee.svg)
 
-![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-manager.svg)
+Les récits utilisateur de l’employé sont :
 
-Les récits utilisateur du responsable de point de vente sont ceux du client, plus ces deux-ci :
-
-> En tant que **responsable de point de vente**, je veux **suivre les commandes en temps réel** pour **gérer le point de vente**
+> En tant qu’**employé,** je veux **savoir quelles pizzas peuvent encore être réalisées** pour **enregistrer une commande**
 >
-> En tant que **responsable de point de vente**, je veux **suivre le stock des ingrédient en temps réel** pour **anticiper mes commandes d’ingrédients**
-
-#### Cas d’utilisation et récits utilisateur du livreur
-
-Après avoir choisi une commande prête à être livrée, le livreur règle le statut de cette commandes à “En livraison”, “Livrée” ou “Annulée”. Il lui faut être authentifié en tant que livreur pour cela :
-
-![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-delivery-man.svg)
-
-Les récits utilisateur du livreur sont :
-
-> En tant que **livreur**, je veux **m’authentifier** pour **suivre les commandes en temps réel**
+> En tant qu’**employé non connecté,** je veux **me connecter** pour **enregistrer une commande**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **suivre les commandes en temps réel** pour **planifier mes livraisons**
+> En tant qu’**employé connecté,** je veux **traiter une commande** pour **répondre à la demande d’un client sur place**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “En livraison”** pour **partir la livrer**
+> En tant qu’**employé connecté,** je veux **traiter une commande** pour **répondre à la demande d’un client par téléphone**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Livrée”** pour **mettre terme à la commande**
+> En tant qu’**employé non connecter,** je veux **me connecter** pour **enregistrer une commande**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Annulée”** pour **mettre terme à la commande**
+> En tant qu’**employé non connecté,** je veux **me connecter** pour **annuler une commande**
+>
+> En tant qu’**employé connecté traiter une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **enregistrer une commande**
+>
+> En tant qu’**employé connecté,** je veux **choisir un paiement en ligne** pour **enregistrer une commande**
+>
+> En tant qu’**employé connecté traitant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **enregistrer une commande**
+>
+> En tant qu’**employé connecté,** je veux **choisir une livraison à domicile** pour **enregistrer une commande**
+>
+> En tant qu’**employé connecté,** je veux **choisir un retrait sur place** pour **enregistrer une commande**
+>
+> En tant qu’**employé connecté,** je veux **choisir un paiement en ligne** pour **enregistrer une commande**
+>
+> En tant qu’**employé connecté traitant une commande avec un retrait sur place,** je veux **choisir un paiemnet sur place** pour **enregistrer commande**
+>
+> En tant qu’**employé connecté traitant une commande à la livraison,** je veux **choisir paiement à la livraison** pour **enregistrer ma commande**
+>
+> En tant qu’**employé connecté délivrant une commande au client,** je veux **encaisser la commande** pour **finaliser la commande**
+>
+> En tant qu’**employé connecté,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes sont prêtes**
+>
+> En tant qu’**employé connecté,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes sont à préparer**
+>
+> En tant qu’**employé connecté,** je veux **consulter l’état du stock des ingrédients** pour **réapprovisionner le stock**
 
 #### Cas d’utilisation et récits utilisateur du pizzaïolo
 
-Après avoir choisi une commande à préparer, le livreur règle le statut de cette commandes à “En préparation”, “Prête à être livrée” ou “Prête à être retirée”. Il lui faut être authentifié en tant que pizzaïolo pour utiliser ces fonctionnalités :
+Après avoir choisi une commande à préparer, le pizzaïolo règle le statut de cette commandes à “En préparation”, “Prête”. Il lui faut être connecté en tant que pizzaïolo pour utiliser ces fonctionnalités :
 
-![Fonctionnalités liées à l’authentification](./img/figure_use-case-diagram-pizza-maker.svg)
+![Cas d’utilisation du pizzaïolo](./img/figure_use-case-diagram-pizza-maker.svg)
 
 Les récits utilisateur du livreur sont :
 
-> En tant que **pizzaïolo**, je veux **m’authentifier** pour **suivre les commandes en temps réel**
+> En tant que **pizzaïolo**, je veux **me connecter** pour **changer le statut d’une commande**
 >
 > En tant que **pizzaïolo authentifié en tant que tel**, je veux **suivre les commandes en temps réel** pour **planifier mes préparations**
 >
@@ -256,6 +294,42 @@ Les récits utilisateur du livreur sont :
 > En tant que **pizzaïolo authentifié en tant que tel**, je veux **passer le statut d’une commande à “Prête à être retirée”** pour **qu’elle soit retirée par le client**
 >
 > En tant que **pizzaïolo authentifié en tant que tel**, je veux **afficher la recette d’une pizza** pour **la préparer rapidement et sans me tromper**
+
+#### Cas d’utilisation et récits utilisateur du livreur
+
+Après avoir choisi une commande prête à être livrée, le livreur règle le statut de cette commandes à “En livraison”, “Livrée” ou “Annulée”. Il lui faut être connecté en tant que livreur pour cela :
+
+![Cas d’utilisation du livreur](./img/figure_use-case-diagram-delivery-man.svg)
+
+Les récits utilisateur du livreur sont :
+
+> En tant que **livreur**, je veux **me connecte** pour **suivre les commandes en temps réel**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **suivre les commandes en temps réel** pour **planifier mes livraisons**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “En livraison”** pour **partir la livrer**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Livrée”** pour **mettre terme à la commande**
+>
+> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Annulée”** pour **mettre terme à la commande**
+
+#### Cas d’utilisation et récits utilisateur du responsable du groupe OC Pizza
+
+Le responsable de point de vente peut suivre en temps réel les commandes et l’évolution du stock d’ingrédients, il peut aussi créer et supprimer des comptes pour ses employés. Il peut supprimer le compte d’un client si nécessaire. De plus, il généralise les cas d’utilisation de ses employés. Bref, il peut tout faire à part créer un compte “Client” :
+
+![Cas d’utilisation du responsable du groupe OC Pizza](./img/figure_use-case-diagram-manager.svg)
+
+Les récits utilisateur spécifiques au responsable du groupe OC Pizza sont :
+
+> En tant que **responsable non connecté**, je veux **me connecter** pour **gérer consulter le stock d’ingrédient d’un point de vente**
+>
+> En tant que **responsable non connecté**, je veux **me connecter** pour **créer un compte**
+>
+> En tant que **responsable non connecté**, je veux **me connecter** pour **supprimer un compte**
+>
+> En tant que **responsable connecté**, je veux **suivre les commandes en temps réel du groupe** pour **gérer le point de vente**
+>
+> En tant que **responsable connecté**, je veux **suivre le stock des ingrédient en temps réel** pour **anticiper mes commandes d’ingrédients**
 
 ## Processus de commande
 
