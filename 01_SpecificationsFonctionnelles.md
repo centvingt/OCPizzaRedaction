@@ -22,35 +22,6 @@ Chaque mise à jour de ce document par le prestataire devra être à nouveau vé
 
 Les versions successives de ce document seront conservées et versionnées dans ce dépôt GitHub : [Dépôt GitHub des spécifications fonctionnelles du présent projet](https://github.com/centvingt/OCPizzaRedaction).
 
-<!--
-les différents acteurs interagissant avec le futur système ;
-la liste des fonctionnalités ;
-le descriptif des fonctionnalités ; -> programmé
-le cycle de vie des commandes. -> diagramme d'activité à faire
-
-2-3 personas -> impact mapping -> fonctionnalités par utilisateur
-diagrammes de cas d'utilisation uml, ddd;
-puis descriptif détaillés (scénarios uml ou user stories agiles) en détaillant bien le chemin utilisateur (chaque étape que l’utilisateur suivra pour la fonctionnalité en question);
-bien modéliser le processus de prise de commande
-
-Analyser un besoin client
-
-Les acteurs sont clairement définis.
-Les fonctionnalités explicites et implicites sont identifiées à partir du recueil des besoins.
-Le processus de commande est modélisé.
-Les points ci-dessus sont retranscrits dans le dossier de spécifications fonctionnelles.
-----
-Lister les fonctionnalités demandées par un client
-
-Les fonctionnalités sont listées en suivant une méthodologie.
-La liste est exhaustive.
-----
-Rédiger les spécifications détaillées d'un projet
-
-Les fonctionnalités sont décrites en suivant une méthodologie.
-Chaque fonctionnalité est décrite étape par étape, que ce soit textuellement et/ou via des schémas/diagrammes.
- -->
-
 ## Contexte
 
 OC Pizza est un groupe de cinq points de vente de pizzas livrées ou à emporter qui ouvrira trois nouveaux points de vente dans six mois.
@@ -82,12 +53,26 @@ Le nouveau système de gestion doit être mis en production pour l’ouverture d
 
 ## Acteurs du système
 
-Les acteurs interagissant avec le système identifiés dans le recueil des besoins sont :
+Les acteurs interagissant avec le système identifiés explicitement dans le recueil des besoins sont :
 
 1. le client qui commande une pizza en ligne,
-1. le responsable du point de vente qui traite une commande passée sur place ou par téléphone,
-1. le livreur qui livre une commande à un client,
-1. le pizzaïolo qui prépare une commande.
+1. le responsable d’OC Pizza qui gère les pizzerias du groupe,
+1. le pizzaïolo qui prépare une commande,
+1. le livreur qui livre une commande à un client.
+
+Par ailleurs, il est implicite :
+
+1. que le système a besoin d’un visiteur, un acteur qui visite le site internet et pourra devenir un client s’il souhaite commander,
+1. que le livreur et le pizzaïolo peuvent être amenés à traiter les commandes passées sur place ou par téléphone,
+
+Les acteurs du système sont donc :
+
+1. le visiteur,
+1. le client qui généralise les cas d’utilisation du visiteur,
+1. le responsable,
+1. l’employé,
+1. le pizzaïolo qui généralise les cas d’utilisation de l’employé,
+1. le livreur qui généralise les cas d’utilisation de l’employé.
 
 ![Les acteurs du système](./img/figure_system-actors.svg)
 
