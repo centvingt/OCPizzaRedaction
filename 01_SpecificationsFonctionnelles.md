@@ -145,6 +145,10 @@ Enfin, il nécessaire d’enregistrer le paiement de la commande :
 
 - Encaisser une commande
 
+Par ailleurs, OC Pizza exprime dans ses besoins l’annulation des commandes. Il est probable que cette annulation implique un remboursement :
+
+- Rembourser une commande
+
 ![Fonctionnalités liées au paiement](./img/figure_implicit-actions-payment.svg)
 
 #### Fonctionnalités liées à la livraison
