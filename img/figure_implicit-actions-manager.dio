@@ -1,0 +1,41 @@
+<mxfile>
+    <diagram id="S3KQ6_6wW9h8_aYrXfJG" name="Page-1">
+        <mxGraphModel dx="706" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="17" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#1DA1E1;" parent="1" source="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="200.50252531694173" y="69.74873734152914" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#1DA1E1;" parent="1" source="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#1DA1E1;" parent="1" source="11" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="299.4974746830583" y="69.74873734152914" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=1;strokeColor=#1DA1E1;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="200.50252531694173" y="169.74873734152914" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;strokeColor=#1DA1E1;" parent="1" source="13" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="299.4974746830583" y="169.74873734152914" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="&lt;font color=&quot;#1da1e1&quot;&gt;Suivre en temps &lt;br&gt;réel les commandes du groupe&amp;nbsp;et leur statut&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="10" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;font color=&quot;#1da1e1&quot;&gt;Suivre en temps&amp;nbsp;réel &lt;br&gt;le stock d’ingrédients &lt;br&gt;du groupe&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="10" width="140" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

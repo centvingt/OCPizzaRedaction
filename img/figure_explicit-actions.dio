@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="Iulx3w0ONlGeuY-yKA-m" name="Page-1">
-        <mxGraphModel dx="1414" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="706" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -13,7 +13,7 @@
                 <mxCell id="8" value="&lt;font color=&quot;#1da1e1&quot;&gt;Afficher la recette &lt;br&gt;d’une pizza&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="370" y="170" width="140" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="&lt;font color=&quot;#1da1e1&quot;&gt;Suivre en temps&amp;nbsp;réel &lt;br&gt;le stock d’ingrédients &lt;br&gt;restant&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
+                <mxCell id="9" value="&lt;font color=&quot;#1da1e1&quot;&gt;Suivre en temps&amp;nbsp;réel &lt;br&gt;le stock d’ingrédients &lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="190" y="10" width="140" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="&lt;font color=&quot;#1da1e1&quot;&gt;Payer une commande &lt;br&gt;en ligne&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
@@ -25,7 +25,7 @@
                 <mxCell id="19" value="&lt;font color=&quot;#1da1e1&quot;&gt;Savoir quelles &lt;br&gt;pizzas peuvent encore être réalisées&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="370" y="10" width="140" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="&lt;font color=&quot;#1da1e1&quot;&gt;Suivre en temps &lt;br&gt;réel le statut des commandes&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
+                <mxCell id="22" value="&lt;font color=&quot;#1da1e1&quot;&gt;Suivre en temps &lt;br&gt;réel les commandes &lt;br&gt;et leur statut&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="10" y="10" width="140" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="&lt;font color=&quot;#1da1e1&quot;&gt;Payer une commande &lt;br&gt;à la livraison&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">

@@ -1,4 +1,4 @@
-# Spécifications fonctionnelles d’un système de gestion de pizzerias
+# Spécifications fonctionnelles d’un système de gestion de pizzérias
 
 - **Date :** 1/05/2021
 - **Client :** OC Pizza
@@ -28,7 +28,7 @@ OC Pizza est un groupe de cinq points de vente de pizzas livrées ou à emporter
 
 Son système informatique actuel :
 
-1. ne lui permet pas une gestion centralisée de ses pizzerias pour suivre leurs ventes et leurs stocks d’ingrédients,
+1. ne lui permet pas une gestion centralisée de ses pizzérias pour suivre leurs ventes et leurs stocks d’ingrédients,
 1. ne permet pas à ses livreurs de mettre à jour en temps réel le statut d’une livraison effectuée.
 
 ## Objectifs du client
@@ -49,14 +49,14 @@ OC Pizza a besoin d’un nouveau système informatique :
 
 ## Aspects pratiques
 
-Le nouveau système de gestion doit être mis en production pour l’ouverture des trois nouvelles pizzeria du groupe le 1/11/2021.
+Le nouveau système de gestion doit être mis en production pour l’ouverture des trois nouvelles pizzéria du groupe le 1/11/2021.
 
 ## Acteurs du système
 
 Les acteurs interagissant avec le système identifiés explicitement dans le recueil des besoins sont :
 
 1. le client qui commande une pizza en ligne,
-1. le responsable d’OC Pizza qui gère les pizzerias du groupe,
+1. le responsable d’OC Pizza qui gère les pizzérias du groupe,
 1. le pizzaïolo qui prépare une commande,
 1. le livreur qui livre une commande à un client.
 
@@ -87,8 +87,8 @@ La lecture du recueil des besoins du client permet d’identifier :
 
 Ces fonctionnalités figurent clairemnt dans le recueil des besoins du client :
 
-- Suivre en temps réel le statut des commandes
-- Suivre en temps réel le stock d’ingrédients restant
+- Suivre en temps réel les commandes et leur statut
+- Suivre en temps réel le stock d’ingrédients
 - Savoir quelles pizzas peuvent encore être réalisées
 - Passer une commande
 - Payer une commande en ligne
@@ -108,8 +108,7 @@ Suivre le statut en temps réel des commandes reçues, en préparation et en liv
 - Modifier le status d’une commande :
   - Régler le statut d’une commande à “Reçue”
   - Régler le statut d’une commande à “En préparation”
-  - Régler le statut d’une commande à “Prête à être livrée”
-  - Régler le statut d’une commande à “Prête à être retirée”
+  - Régler le statut d’une commande à “Prête”
   - Régler le statut d’une commande à “En livraison”
   - Régler le statut d’une commande à “Livrée”
   - Régler le statut d’une commande à “Retirée”
@@ -119,9 +118,9 @@ Suivre le statut en temps réel des commandes reçues, en préparation et en liv
 
 #### Fonctionnalité liée au suivi stock d’ingrédients
 
-Pour suivre en temps réel le stock d’ingrédients restant, il faut que le système puisse mettre à jour ce stock :
+Pour suivre en temps réel le stock d’ingrédients restant, il faut que le système permette de mettre à jour ce stock :
 
-- Mettre à jour le stock d’ingrédients restant
+- Mettre à jour le stock d’ingrédients
 
 Cette action devra être déclenchée :
 
@@ -151,14 +150,28 @@ Pour choisir la livraison de la commande ou son retrait sur place, ces actions s
 
 ![Fonctionnalités liées à la livraison](./img/figure_implicit-actions-delivery.svg)
 
-#### Fonctionnalités liées à l’authentification
+#### Fonctionnalités liées à la connexion
 
-Les acteurs devront s’authentifier pour commander une pizza, suivre les commandes, vérifier les stocks, etc. Cela nécessite donc les actions suivantes :
+Les acteurs devront se connecter au système pour commander une pizza, suivre les commandes, vérifier les stocks, etc. Cela nécessite donc les actions suivantes :
 
-- Créer un compte
-- S’authentifier
+- Créer un compte :
+  - Créer un compte “Client”
+  - Créer un compte “Employé” :
+    - Créer un compte “Pizzaïolo”
+    - Créer un compte “Livreur”
+  - Créer un compte “Responsable”
+- Se connecter
 
 ![Fonctionnalités liées à l’authentification](./img/figure_implicit-actions-account.svg)
+
+#### Fonctionnalités liées à la gestion du groupe
+
+Les responsables du groupe OC Pizza doivent pouvoir :
+
+- Suivre en temps réel les commandes du groupe et leur statut
+- Suivre en temps réel le stock d’ingrédients du groupe
+
+![Fonctionnalités liées à l’authentification](./img/figure_implicit-actions-manager.svg)
 
 ### Cas d’utilisation et récits utilisateur
 
