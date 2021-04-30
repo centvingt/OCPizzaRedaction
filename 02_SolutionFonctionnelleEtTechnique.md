@@ -70,7 +70,7 @@ Pour proposer la solution adaptée aux acteurs du système informatique de gesti
 
 ## Carte d’impact
 
-OC Pizza est en plein essor et veut souhaite se doter d’un système de gestion de ses commandes efficace et réactif. Pour réaliser cet objectif, les impacts sur les acteurs du nouveau systèmes devraient être ceux-ci :
+OC Pizza est en plein essor et veut souhaite se doter d’un système de gestion de ses commandes efficace et réactif. Les impacts sur les acteurs du nouveau systèmes pourraient être ceux-ci :
 
 ![Carte d’impact](./img/figure_impact-mapping.svg)
 
@@ -81,12 +81,12 @@ OC Pizza est en plein essor et veut souhaite se doter d’un système de gestion
 Nous proposons de limiter le back-end à une simple API Rest JSON ou GraphQL :
 
 1. pour minimiser les temps de réponse du serveur,
-1. tout en abaissant aussi les frais d’hébergement de ce serveur
+1. tout en abaissant les frais d’hébergement de ce serveur
 1. et en réduisant également le temps de développement du _backend_.
 
-Le travail qu’aurait effectué le _backend_ avec une _stack_ conventionnelle comme la LAMP _stack_, c’est-à-dire la génération dynamique de contenus HTML, sera effectuée côté client.
+Le travail qu’aurait effectué le _backend_ avec une _stack_ conventionnelle comme la _LAMP stack_, c’est-à-dire la génération dynamique de contenus HTML, sera effectuée côté client.
 
-La _stack_ que nous proposons (appelée _JAMStack_) permettra en plus de ces avantages d’utiliser tel quel le _backend_ pour des applications iOS et Android, pour _smartphones_ et tablettes.
+En plus de ces avantages, la _stack_ que nous proposons (appelée _JAMStack_) permettra de ré-utiliser tel quel le _backend_ pour des applications iOS et Android, pour _smartphones_ et tablettes.
 
 En effet, la carte d’impact ci-dessus révèle que le choix des applications mobile et tactile devrait être fait rapidement si le groupe OC Pizza poursuivait sa croissance. IT Consulting & Development pourrait d’ailleurs accompagner OC Pizza dans le développement de telles application en parallèle de son nouveau site internet si OC Pizza le souhaite.
 
@@ -94,9 +94,11 @@ En effet, la carte d’impact ci-dessus révèle que le choix des applications m
 
 ### Frontend
 
-Nous proposons pour en _frontend_ d’utiliser React pour optimiser le temps de développement au cas où OC Pizza décide d’adopter une stratégie digitale mobile. En effet, nous pourrions développer ces applications mobile avec la librairie React Native et réutiliser des composants et des logiques de développement similaires à ceux du site internet.
+Nous proposons en _frontend_ d’utiliser React pour optimiser le temps de développement au cas où OC Pizza décide d’adopter une stratégie digitale mobile. En effet, nous pourrions développer ces applications mobile avec la librairie React Native et réutiliser des composants et des logiques de développement similaires à ceux du site internet.
+
+Il serait pertinent de réaliser des applications pour chaque acteur du système (client, livreur, pizzaïolo, etc.) pour répondre à leurs besoins particuliers (afficher un trajet, suivre une commande, etc.). Ces applications utiliseraient toutes la même API, il n’y aurait que le _frontend_ à développer.
 
 ### Frameworks
 
 Pour développer plus rapidement le _backend_ et lui assurer une meilleure maintenabilité, nous pourrions utiliser un _headless CMS_ tel que Strapi.
-Pour le site internet, nous pourrions utiliser le _framework_ Gatsby
+Pour le site internet, nous pourrions utiliser le _framework_ Gatsby et coder ainsi ce site avec React. Les éventuelles applications mobiles seraient développées avec React Native.
