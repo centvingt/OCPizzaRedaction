@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="Iulx3w0ONlGeuY-yKA-m" name="Page-1">
-        <mxGraphModel dx="706" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="888" dy="927" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -30,6 +30,9 @@
                 </mxCell>
                 <mxCell id="29" value="&lt;font color=&quot;#1da1e1&quot;&gt;Payer une commande &lt;br&gt;à la livraison&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="280" y="90" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;font color=&quot;#1da1e1&quot;&gt;Livrer une commande&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="250" width="140" height="70" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

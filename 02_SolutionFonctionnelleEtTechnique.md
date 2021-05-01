@@ -23,21 +23,6 @@ Pour proposer la solution adaptée aux acteurs du système informatique de gesti
 - **Aisance numérique :** \*\*\*\*\*
 - **Citation :** _“Je n’ai pas de temps à perdre”_
 
-### Youssef le gérant
-
-![Youssef le gérant](./img/persona_youssef_w200.jpg)
-
-- **Identité :**
-  - Youssef Benkacem,
-  - 32 ans,
-  - Gérant de l’OC Pizza de Paris 19,
-  - Marié, un enfant,
-  - Montreuil.
-- **Biographie :** Alors qu’ils dévelopaient leur franchise, Franck et Lola ont fait appel à Karim il y a un an et demi quand ils n’ont plus eu le temps de s’occuper de leur pizzeria du nord-est de Paris. Il a su très rapidement reprendre la gestion de ce point de vente dans lequel travaillent deux pizzaïolos et trois livreurs.
-- **Matériel informatique :** Un Galaxy S20 et un PC portable Dell.
-- **Aisance numérique :** \*\*\*--
-- **Citation :** _“J’ai toujours un œil sur les performances de mon point de vente”_
-
 ### Thomas le livreur
 
 ![Thomas le livreur](./img/persona_thomas_w200.jpg)

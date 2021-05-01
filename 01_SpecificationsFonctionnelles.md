@@ -1,6 +1,6 @@
 # Spécifications fonctionnelles d’un système de gestion de pizzérias
 
-- **Date :** 1/05/2021
+- **Date :** 8/05/2021
 - **Client :** OC Pizza
 - **Prestataire :** IT Consulting & Development
 
@@ -72,12 +72,67 @@ Les acteurs du système sont donc :
 
 ![Les acteurs du système](./img/figure_system-actors.svg)
 
+### Personas
+
+Pour mieux nous représenter les principaux acteurs du système que nous mettons en place, voici quatre personas qui les pesonifient.
+
+#### Lia la cliente
+
+![Lia la cliente](./img/persona_lia_w200.jpg)
+
+- **Identité :**
+  - Lia Clément,
+  - 22 ans,
+  - Étudiante en biochimie,
+  - Célibataire,
+  - Paris 20.
+- **Biographie :** Passionnée par les jeux vidéos en ligne, elle commande fréquemment des pizzas chez OC Pizza parce qu’elle n’a que très peu de temps à consacrer à ses besoins vitaux (boire, manger, dormir).
+- **Matériel informatique :** Un PC portable Alienware, un iPhone 12 Pro Max.
+- **Aisance numérique :** \*\*\*\*\*
+- **Citation :** _“Je n’ai pas de temps à perdre”_
+
+#### Thomas le livreur
+
+![Thomas le livreur](./img/persona_thomas_w200.jpg)
+
+- **Identité :**
+  - Thomas Vogiel,
+  - 24 ans,
+  - Livreur de pizza,
+  - En couple,
+  - Paris 18.
+- **Biographie :** Thomas a rejoint l’équipe de l’OC Pizza de l’avenue de Stalingrad il y a six mois. Il s’y sent bien et ne s’ennuie jamais : il y a toujours quelque chose à faire à OC Pizza !
+- **Matériel informatique :** Un Galaxy S8 et une Xbox One 500 Go.
+- **Aisance numérique :** \*\*---
+- **Citation :** _“Je vis à 49.9 à l’heure”_
+
+#### Émelyne la pizzaïola
+
+![Émelyne la pizzaïola](./img/persona_emelyne_w200.jpg)
+
+- **Identité :**
+  - Émelyne Polia,
+  - 35 ans,
+  - Pizzaïola à OC Pizza,
+  - Mariée, deux enfants,
+  - Saint-Mandé.
+- **Biographie :** Après des études d’arts plastiques et avoir occupé plusieurs postes dans la vente de prêt-à-porter dans le quartier du Sentier à Paris, elle est embauchée par Franck et Lola à l’ouverture du premier point de vente d’OC Pizza il y a trois ans dans le 19e arrondissement. Elle a trouvé rapidement sa place dans les cuisine de la pizzeria et elle est essentielle à son bon fonctionnement.
+- **Matériel informatique :** Un smartphone Android vieux de plusieurs années qui ne lui sert qu’à téléphoner.
+- **Aisance numérique :** \*----
+- **Citation :** _“Toujours donner le meilleur de moi-même”_
+
 ## Interactions des acteurs avec le système
 
 La lecture du recueil des besoins du client permet d’identifier :
 
-1. des fonctionnalités explicitement demandées par le client, nommées ci-dessous les _fonctionnalités explicites_,
-1. des fonctionnalités implicitement nécessaires au systèmes, ommées ci-dessous les _fonctionnalités implicites_,
+1. des fonctionnalités explicitement demandées par le client, nommées ci-dessous les _fonctionnalités explicites,_
+1. des fonctionnalités implicitement nécessaires au systèmes, ommées ci-dessous les _fonctionnalités implicites._
+
+### Carte d’impact
+
+Voici une carte d’impact pour mieux cerner les besoins des personas et ainsi déterminer les fonctionalité implicites qui ne sont pas clairement définies par OC Pizza :
+
+![Carte d’impact](./img/figure_impact-mapping.svg)
 
 ### Fonctionnalités explicites
 
@@ -92,6 +147,7 @@ Ces fonctionnalités figurent clairemnt dans le recueil des besoins du client :
 - Modifier une commande
 - Annuler une commande
 - Afficher la recette d’une pizza
+- Livrer une commande
 
 ![Fonctionnalités explicites](./img/figure_explicit-actions.svg)
 
@@ -99,7 +155,7 @@ Ces fonctionnalités figurent clairemnt dans le recueil des besoins du client :
 
 #### Fonctionnalités liées au statut d’une commande
 
-Suivre le statut en temps réel des commandes reçues, en préparation et en livraison implique de modifier ce status. Par ailleurs, il est nécessaire à la bonne efficacité du système d’ajouter plusieurs statuts en plus des statuts _Reçue_, _En préparation_ et _En livraison_ :
+Suivre le statut en temps réel des commandes reçues, en préparation et en livraison implique de modifier ce status. Par ailleurs, il est nécessaire à la bonne efficacité du système d’ajouter plusieurs statuts en plus des statuts _Reçue,_ _En préparation_ et _En livraison_ :
 
 - Modifier le status d’une commande :
   - Régler le statut d’une commande à “Reçue”
@@ -111,6 +167,14 @@ Suivre le statut en temps réel des commandes reçues, en préparation et en liv
   - Régler le statut d’une commande à “Annulée”
 
 ![Fonctionnalités liées au status d’une commande](./img/figure_implicit-actions-order-status.svg)
+
+#### Fonctionnalité liée à la modificatio et à l’annulation d’une commande
+
+Pour modifier ou annuler une commande, le client consultera un historique de ses commandes et le statut qui leur est associé. La consultation du statut d’une commande permettra au client de savoir s’il peut encore le modifier ou l’annuler.
+
+- Consulter l’historique des commandes d’un client et leur statut
+
+![Fonctionnalités liées au status d’une commande](./img/figure_implicit-actions-order-history.svg)
 
 #### Fonctionnalité liée au suivi stock d’ingrédients
 
@@ -161,13 +225,17 @@ Pour choisir la livraison de la commande ou son retrait sur place, ces actions s
 
 L’action de délivrer une commande est aussi nécessaire :
 
-- Délivrer une commande
+- Délivrer une commande retirée sur place
 
 ![Fonctionnalités liées à la livraison](./img/figure_implicit-actions-delivery.svg)
 
 #### Fonctionnalités liées à la connexion
 
-Les acteurs devront se connecter au système pour commander une pizza, suivre les commandes, vérifier les stocks, etc. Cela nécessite donc les actions suivantes :
+Les acteurs devront se connecter au système pour commander une pizza, suivre les commandes, vérifier les stocks, etc.
+
+Les clients créeront leurs propres comptes, tandis que les responsables d’OC Pizza créeront ceux de leurs employés (les pizzaïolos et les livreurs).
+
+Cela nécessite donc les actions suivantes :
 
 - Créer un compte :
   - Créer un compte “Client”
@@ -203,37 +271,39 @@ Les cas d’utilisation du système par le visiteur et le client sont les suivan
 
 En analysant ce schéma, nous pouvons déterminer ces récits utilisateur :
 
-> En tant que **client non connecter,** je veux **savoir quelles pizzas peuvent encore être réalisées** pour **passer une commande**
+> En tant que **client,** je veux **savoir quelles pizzas peuvent encore être réalisées** pour **passer une commande**
 >
-> En tant que **client non connecté,** je veux **me connecter** pour **passer une commande**
+> En tant que **client,** je veux **me connecter** pour **passer une commande**
 >
-> En tant que **client non connecté,** je veux **créer un compte client** pour **me connecter**
+> En tant que **client,** je veux **créer un compte client** pour **me connecter**
 >
-> En tant que **client connecté,** je veux **passer une commande** pour **retirer cette commande au point de vente**
+> En tant que **client,** je veux **passer une commande** pour **retirer cette commande au point de vente**
 >
-> En tant que **client connecté,** je veux **passer une commande** pour **me la faire livrer**
+> En tant que **client,** je veux **passer une commande** pour **me la faire livrer**
 >
-> En tant que **client non connecter,** je veux **me connecter** pour **modifier une commande**
+> En tant que **client,** je veux **me connecter** pour **modifier une commande**
 >
-> En tant que **client non connecté,** je veux **me connecter** pour **annuler une commande**
+> En tant que **client,** je veux **me connecter** pour **annuler une commande**
 >
-> En tant que **client connecté passant une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **passer une commande**
+> En tant que **client passant une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **passer une commande**
 >
-> En tant que **client connecté,** je veux **choisir un paiement en ligne** pour **passer une commande**
+> En tant que **client,** je veux **choisir un paiement en ligne** pour **passer une commande**
 >
-> En tant que **client connecté passant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **passer une commande**
+> En tant que **client passant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **passer une commande**
 >
-> En tant que **client connecté,** je veux **choisir une livraison à domicile** pour **retirer ma commande**
+> En tant que **client,** je veux **choisir une livraison à domicile** pour **retirer ma commande**
 >
-> En tant que **client connecté,** je veux **choisir un retrait sur place** pour **retirer ma commande**
+> En tant que **client,** je veux **choisir un retrait sur place** pour **retirer ma commande**
 >
-> En tant que **client non connecté,** je veux **me connecter** pour **supprimer mon compte client**
+> En tant que **client,** je veux **me connecter** pour **supprimer mon compte client**
 >
-> En tant que **client connecté,** je veux **choisir un paiement en ligne** pour **payer ma commande**
+> En tant que **client,** je veux **choisir un paiement en ligne** pour **payer ma commande**
 >
-> En tant que **client connecté passant une commande avec un retrait sur place,** je veux **choisir un paiemnet sur place** pour **payer ma commande**
+> En tant que **client passant une commande avec un retrait sur place,** je veux **choisir un paiemnet sur place** pour **payer ma commande**
 >
-> En tant que **client connecté passant une commande à la livraison,** je veux **choisir paiement à la livraison** pour **payer ma commande**
+> En tant que **client passant une commande à la livraison,** je veux **choisir paiement à la livraison** pour **payer ma commande**
+>
+> En tant que **client,** je veux **consulter l’historique de mes commandes** pour **savoir si je peux annuler ma commande en cours**
 
 #### Cas d’utilisation et récits utilisateur de l’employé
 
@@ -245,39 +315,39 @@ Les récits utilisateur de l’employé sont :
 
 > En tant qu’**employé,** je veux **savoir quelles pizzas peuvent encore être réalisées** pour **enregistrer une commande**
 >
-> En tant qu’**employé non connecté,** je veux **me connecter** pour **enregistrer une commande**
+> En tant qu’**employé,** je veux **me connecter** pour **enregistrer une commande**
 >
-> En tant qu’**employé connecté,** je veux **traiter une commande** pour **répondre à la demande d’un client sur place**
+> En tant qu’**employé,** je veux **traiter une commande** pour **répondre à la demande d’un client sur place**
 >
-> En tant qu’**employé connecté,** je veux **traiter une commande** pour **répondre à la demande d’un client par téléphone**
+> En tant qu’**employé,** je veux **traiter une commande** pour **répondre à la demande d’un client par téléphone**
 >
 > En tant qu’**employé non connecter,** je veux **me connecter** pour **enregistrer une commande**
 >
-> En tant qu’**employé non connecté,** je veux **me connecter** pour **annuler une commande**
+> En tant qu’**employé,** je veux **me connecter** pour **annuler une commande**
 >
-> En tant qu’**employé connecté traiter une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **enregistrer une commande**
+> En tant qu’**employé traiter une commande avec une livraison à domicile,** je veux **choisir un paiement à la livraison** pour **enregistrer une commande**
 >
-> En tant qu’**employé connecté,** je veux **choisir un paiement en ligne** pour **enregistrer une commande**
+> En tant qu’**employé,** je veux **choisir un paiement en ligne** pour **enregistrer une commande**
 >
-> En tant qu’**employé connecté traitant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **enregistrer une commande**
+> En tant qu’**employé traitant une commande avec un retrait sur place,** je veux **choisir un paiement sur place** pour **enregistrer une commande**
 >
-> En tant qu’**employé connecté,** je veux **choisir une livraison à domicile** pour **enregistrer une commande**
+> En tant qu’**employé,** je veux **choisir une livraison à domicile** pour **enregistrer une commande**
 >
-> En tant qu’**employé connecté,** je veux **choisir un retrait sur place** pour **enregistrer une commande**
+> En tant qu’**employé,** je veux **choisir un retrait sur place** pour **enregistrer une commande**
 >
-> En tant qu’**employé connecté,** je veux **choisir un paiement en ligne** pour **enregistrer une commande**
+> En tant qu’**employé,** je veux **choisir un paiement en ligne** pour **enregistrer une commande**
 >
-> En tant qu’**employé connecté traitant une commande avec un retrait sur place,** je veux **choisir un paiemnet sur place** pour **enregistrer commande**
+> En tant qu’**employé traitant une commande avec un retrait sur place,** je veux **choisir un paiemnet sur place** pour **enregistrer commande**
 >
-> En tant qu’**employé connecté traitant une commande à la livraison,** je veux **choisir paiement à la livraison** pour **enregistrer ma commande**
+> En tant qu’**employé traitant une commande à la livraison,** je veux **choisir paiement à la livraison** pour **enregistrer ma commande**
 >
-> En tant qu’**employé connecté délivrant une commande au client,** je veux **encaisser la commande** pour **finaliser la commande**
+> En tant qu’**employé délivrant une commande au client,** je veux **encaisser la commande** pour **finaliser la commande**
 >
-> En tant qu’**employé connecté,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes sont prêtes**
+> En tant qu’**employé,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes sont prêtes**
 >
-> En tant qu’**employé connecté,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes sont à préparer**
+> En tant qu’**employé,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes à préparer**
 >
-> En tant qu’**employé connecté,** je veux **consulter l’état du stock des ingrédients** pour **réapprovisionner le stock**
+> En tant qu’**employé,** je veux **consulter l’état du stock des ingrédients** pour **réapprovisionner le stock**
 
 #### Cas d’utilisation et récits utilisateur du pizzaïolo
 
@@ -285,19 +355,21 @@ Après avoir choisi une commande à préparer, le pizzaïolo règle le statut de
 
 ![Cas d’utilisation du pizzaïolo](./img/figure_use-case-diagram-pizza-maker.svg)
 
-Les récits utilisateur du livreur sont :
+Les récits utilisateur du pizzaïolo sont :
 
 > En tant que **pizzaïolo**, je veux **me connecter** pour **changer le statut d’une commande**
 >
-> En tant que **pizzaïolo authentifié en tant que tel**, je veux **suivre les commandes en temps réel** pour **planifier mes préparations**
+> En tant que **pizzaïolo**, je veux **suivre les commandes en temps réel** pour **planifier mes préparations**
 >
-> En tant que **pizzaïolo authentifié en tant que tel**, je veux **passer le statut d’une commande à “En préparation”** pour **la préparer**
+> En tant que **pizzaïolo**, je veux **passer le statut d’une commande à “En préparation”** pour **la préparer**
 >
-> En tant que **pizzaïolo authentifié en tant que tel**, je veux **passer le statut d’une commande à “Prête à être livrée”** pour **qu’elle soit livrée au client**
+> En tant que **pizzaïolo**, je veux **passer le statut d’une commande à “Prête à être livrée”** pour **qu’elle soit livrée au client**
 >
-> En tant que **pizzaïolo authentifié en tant que tel**, je veux **passer le statut d’une commande à “Prête à être retirée”** pour **qu’elle soit retirée par le client**
+> En tant que **pizzaïolo**, je veux **passer le statut d’une commande à “Prête à être retirée”** pour **qu’elle soit retirée par le client**
 >
-> En tant que **pizzaïolo authentifié en tant que tel**, je veux **afficher la recette d’une pizza** pour **la préparer rapidement et sans me tromper**
+> En tant que **pizzaïolo**, je veux **afficher la recette d’une pizza** pour **la préparer rapidement et sans me tromper**
+>
+> En tant que **pizzaïolo,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes sont à préparer**
 
 #### Cas d’utilisation et récits utilisateur du livreur
 
@@ -309,13 +381,15 @@ Les récits utilisateur du livreur sont :
 
 > En tant que **livreur**, je veux **me connecte** pour **suivre les commandes en temps réel**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **suivre les commandes en temps réel** pour **planifier mes livraisons**
+> En tant que **livreur**, je veux **suivre les commandes en temps réel** pour **planifier mes livraisons**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “En livraison”** pour **partir la livrer**
+> En tant que **livreur**, je veux **passer le statut d’une commande à “En livraison”** pour **partir la livrer**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Livrée”** pour **mettre terme à la commande**
+> En tant que **livreur**, je veux **passer le statut d’une commande à “Livrée”** pour **mettre terme à la commande**
 >
-> En tant que **livreur authentifié en tant que tel**, je veux **passer le statut d’une commande à “Annulée”** pour **mettre terme à la commande**
+> En tant que **livreur**, je veux **passer le statut d’une commande à “Annulée”** pour **mettre terme à la commande**
+>
+> En tant que **livreur,** je veux **consulter la liste des commandes et de leur statut** pour **savoir quelles commandes sont à livrer**
 
 #### Cas d’utilisation et récits utilisateur du responsable du groupe OC Pizza
 
@@ -325,15 +399,15 @@ Le responsable de point de vente peut suivre en temps réel les commandes et l�
 
 Les récits utilisateur spécifiques au responsable du groupe OC Pizza sont :
 
-> En tant que **responsable non connecté**, je veux **me connecter** pour **gérer consulter le stock d’ingrédient d’un point de vente**
+> En tant que **responsable**, je veux **me connecter** pour **gérer consulter le stock d’ingrédient d’un point de vente**
 >
-> En tant que **responsable non connecté**, je veux **me connecter** pour **créer un compte**
+> En tant que **responsable**, je veux **me connecter** pour **créer un compte**
 >
-> En tant que **responsable non connecté**, je veux **me connecter** pour **supprimer un compte**
+> En tant que **responsable**, je veux **me connecter** pour **supprimer un compte**
 >
-> En tant que **responsable connecté**, je veux **suivre les commandes en temps réel du groupe** pour **gérer le point de vente**
+> En tant que **responsable**, je veux **suivre les commandes en temps réel du groupe** pour **gérer le point de vente**
 >
-> En tant que **responsable connecté**, je veux **suivre le stock des ingrédient en temps réel** pour **anticiper mes commandes d’ingrédients**
+> En tant que **responsable**, je veux **suivre le stock des ingrédient en temps réel** pour **anticiper mes commandes d’ingrédients**
 
 ## Processus de commande
 

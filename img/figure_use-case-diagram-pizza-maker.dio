@@ -1,10 +1,10 @@
 <mxfile>
     <diagram id="ZDwU52DMAoR-JBrt6ogk" name="Page-1">
-        <mxGraphModel dx="706" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="888" dy="927" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" value="Acteurs et actions" parent="0"/>
-                <mxCell id="7" value="&lt;font color=&quot;#1da1e1&quot;&gt;Pizzaïolo&lt;br&gt;&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#006EAF;fontColor=#ffffff;fillColor=none;" parent="1" vertex="1">
+                <mxCell id="7" value="&lt;font color=&quot;#1da1e1&quot;&gt;Pizzaïolo&lt;br&gt;&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontColor=#ffffff;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="19" y="182" width="30" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="329" value="&lt;font color=&quot;#1da1e1&quot;&gt;Système informatique de gestion d’une pizzeria&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;width=290;height=40;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;strokeColor=#006EAF;fontColor=#ffffff;fillColor=none;fontStyle=1" parent="1" vertex="1">
@@ -34,7 +34,7 @@
                 <mxCell id="342" value="&lt;span style=&quot;color: rgb(29 , 161 , 225)&quot;&gt;Afficher la recette&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;color: rgb(29 , 161 , 225)&quot;&gt;&lt;span style=&quot;color: rgb(29 , 161 , 225)&quot;&gt;d’une pizza&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="400" y="290" width="140" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="344" value="&lt;font color=&quot;#1da1e1&quot;&gt;Employé&lt;br&gt;&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#006EAF;fontColor=#ffffff;fillColor=none;" parent="1" vertex="1">
+                <mxCell id="344" value="&lt;font color=&quot;#1da1e1&quot;&gt;Employé&lt;br&gt;&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontColor=#ffffff;fillColor=none;strokeColor=#1DA1E1;" parent="1" vertex="1">
                     <mxGeometry x="19" y="30" width="30" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="345" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeColor=#1DA1E1;startArrow=block;startFill=1;" parent="1" edge="1">
