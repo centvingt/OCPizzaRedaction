@@ -2,9 +2,11 @@
 
 ## Modélisation des objets du domaine fonctionnel
 
-![Modélisation des objets du domaine fonctionnel](img/figure_functional_domain.svg)
+![Diagramme de modélisation des objets du domaine fonctionnel](img/figure_functional-domain.svg)
 
 ## Les composants et leurs interactions
+
+![Diagramme des composants](img/figure_component-diagram.svg)
 
 ## Déploiement des composants
 
