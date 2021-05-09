@@ -40,19 +40,40 @@ BEGIN TRANSACTION;
 	SELECT setval('public.unite_de_mesure_id_seq', 3, true);
 
 -- ==================================================================
--- pizzeria
+-- adresse
 -- ==================================================================
 	INSERT 
-		INTO public.pizzeria (id, nom, adresse_voie, adresse_ville, adresse_code_postal) 
-		VALUES (1,'Stalingrad','46, boulevard de La Villette','Paris','75019');
+		INTO public.adresse (id, voie, ville, code_postal, complement) 
+		VALUES (1, '46, boulevard de La Villette', 'Paris', '75019', NULL);
 
 	INSERT 
-		INTO public.pizzeria (id, nom, adresse_voie, adresse_ville, adresse_code_postal) 
-		VALUES (2,'Bastille','12, boulevard Richard-Lenoir','Paris','75011');
+		INTO public.adresse (id, voie, ville, code_postal, complement) 
+		VALUES (2, '12, boulevard Richard-Lenoir', 'Paris', '75011', NULL);
 
 	INSERT 
-		INTO public.pizzeria (id, nom, adresse_voie, adresse_ville, adresse_code_postal) 
-		VALUES (3,'Place d’Italie','156, boulevard Auguste Blanqui','Paris','75013');
+		INTO public.adresse (id, voie, ville, code_postal, complement) 
+		VALUES (3, '156, boulevard Auguste Blanqui', 'Paris', '75013', NULL);
+
+	INSERT 
+		INTO public.adresse (id, voie, ville, code_postal, complement) 
+		VALUES (4, '12, avenue Gambetta', 'Paris', '75020', 'Digicode 1234B');
+
+	INSERT 
+		INTO public.adresse (id, voie, ville, code_postal, complement) 
+		VALUES (5, '6, avenue de Flandre', 'Paris', '75019', NULL);
+
+	INSERT 
+		INTO public.adresse (id, voie, ville, code_postal, complement) 
+		VALUES (6, '18, rue de la Butte-aux-cailles', 'Paris', '75013', NULL);
+
+	SELECT setval('public.adresse_id_seq', 3, true);
+
+-- ==================================================================
+-- pizzeria
+-- ==================================================================
+	INSERT INTO public.pizzeria (id, nom, adresse_id) VALUES (1, 'Stalingrad', 1);
+	INSERT INTO public.pizzeria (id, nom, adresse_id) VALUES (2,'Bastille', 2);
+	INSERT INTO public.pizzeria (id, nom, adresse_id) VALUES (3, 'Place d’Italie', 3);
 
 	SELECT setval('public.pizzeria_id_seq', 3, true);
 
@@ -256,40 +277,16 @@ BEGIN TRANSACTION;
 -- client
 -- ==================================================================
 	INSERT 
-		INTO public.client (
-				id, nom, prenom,
-				adresse_voie, adresse_ville, adresse_code_postal,
-				adresse_complement, telephone
-			) 
-		VALUES (
-				1, 'Garnier', 'Jérôme', 
-				'12, avenue Gambetta', 'Paris', '75020',
-				'Digicode 1234B', NULL
-			);
+		INTO public.client (id, nom, prenom, telephone, adresse_id) 
+		VALUES (1, 'Garnier', 'Jérôme', NULL, 4);
 			
 	INSERT 
-		INTO public.client (
-				id, nom, prenom,
-				adresse_voie, adresse_ville, adresse_code_postal,
-				adresse_complement, telephone
-			) 
-		VALUES (
-				2, 'Djamel', 'El-Mani', 
-				'6, avenue de Flandre', 'Paris', '75019',
-				NULL, NULL
-			);
+		INTO public.client (id, nom, prenom, telephone, adresse_id) 
+		VALUES (2, 'Djamel', 'El-Mani', NULL, 5);
 
 	INSERT 
-		INTO public.client (
-				id, nom, prenom,
-				adresse_voie, adresse_ville, adresse_code_postal,
-				adresse_complement, telephone
-			) 
-		VALUES (
-				3, 'Louise', 'Marionaud', 
-				'18, rue de la Butte-aux-cailles', 'Paris', '75013',
-				NULL, '0677889900'
-			);
+		INTO public.client (id, nom, prenom, telephone, adresse_id) 
+		VALUES (3, 'Louise', 'Marionaud', '0677889900', 6);
 
 	SELECT setval('public.client_id_seq', 3, true);
 

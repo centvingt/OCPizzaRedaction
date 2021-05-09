@@ -1,4 +1,18 @@
 
+CREATE SEQUENCE public.adresse_id_seq;
+
+CREATE TABLE public.adresse (
+                id INTEGER NOT NULL DEFAULT nextval('public.adresse_id_seq'),
+                voie VARCHAR(200) NOT NULL,
+                ville VARCHAR(100) NOT NULL,
+                code_postal VARCHAR(5) NOT NULL,
+                complement VARCHAR(1000),
+                CONSTRAINT adresse_pk PRIMARY KEY (id)
+);
+
+
+ALTER SEQUENCE public.adresse_id_seq OWNED BY public.adresse.id;
+
 CREATE SEQUENCE public.unite_de_mesure_id_seq;
 
 CREATE TABLE public.unite_de_mesure (
@@ -16,11 +30,8 @@ CREATE TABLE public.client (
                 id INTEGER NOT NULL DEFAULT nextval('public.client_id_seq'),
                 nom VARCHAR(100) NOT NULL,
                 prenom VARCHAR(100) NOT NULL,
-                adresse_voie VARCHAR(200) NOT NULL,
-                adresse_ville VARCHAR(100) NOT NULL,
-                adresse_code_postal VARCHAR(5) NOT NULL,
-                adresse_complement VARCHAR(200),
                 telephone VARCHAR(10),
+                adresse_id INTEGER,
                 CONSTRAINT client_pk PRIMARY KEY (id)
 );
 
@@ -121,9 +132,7 @@ CREATE SEQUENCE public.pizzeria_id_seq;
 CREATE TABLE public.pizzeria (
                 id INTEGER NOT NULL DEFAULT nextval('public.pizzeria_id_seq'),
                 nom VARCHAR(100) NOT NULL,
-                adresse_voie VARCHAR(200) NOT NULL,
-                adresse_ville VARCHAR(100) NOT NULL,
-                adresse_code_postal VARCHAR(5) NOT NULL,
+                adresse_id INTEGER NOT NULL,
                 CONSTRAINT pizzeria_pk PRIMARY KEY (id)
 );
 
@@ -228,6 +237,20 @@ CREATE TABLE public.pizzeria_stock_accompagnement (
                 CONSTRAINT pizzeria_stock_accompagnement_pk PRIMARY KEY (pizzeria_id, accompagnement_id)
 );
 
+
+ALTER TABLE public.client ADD CONSTRAINT adresse_client_fk
+FOREIGN KEY (adresse_id)
+REFERENCES public.adresse (id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE public.pizzeria ADD CONSTRAINT adresse_pizzeria_fk
+FOREIGN KEY (adresse_id)
+REFERENCES public.adresse (id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
 
 ALTER TABLE public.produit ADD CONSTRAINT unite_de_mesure_produit_fk
 FOREIGN KEY (unite_de_mesure_id)
