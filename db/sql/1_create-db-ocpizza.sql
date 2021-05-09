@@ -21,13 +21,19 @@ CREATE TABLE public.client (
                 adresse_code_postal VARCHAR(5) NOT NULL,
                 adresse_complement VARCHAR(200),
                 telephone VARCHAR(10),
-                email VARCHAR(100) NOT NULL,
-                mot_de_passe VARCHAR(20) NOT NULL,
                 CONSTRAINT client_pk PRIMARY KEY (id)
 );
 
 
 ALTER SEQUENCE public.client_id_seq OWNED BY public.client.id;
+
+CREATE TABLE public.client_compte (
+                client_id INTEGER NOT NULL,
+                email VARCHAR(100) NOT NULL,
+                mot_de_passe VARCHAR NOT NULL,
+                CONSTRAINT client_compte_pk PRIMARY KEY (client_id)
+);
+
 
 CREATE SEQUENCE public.commande_mode_de_livraison_id_seq;
 
@@ -231,6 +237,13 @@ ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
 ALTER TABLE public.commande ADD CONSTRAINT client_commande_fk
+FOREIGN KEY (client_id)
+REFERENCES public.client (id)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE public.client_compte ADD CONSTRAINT client_client_compte_fk
 FOREIGN KEY (client_id)
 REFERENCES public.client (id)
 ON DELETE NO ACTION

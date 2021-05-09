@@ -12,6 +12,7 @@ BEGIN TRANSACTION;
 	DELETE FROM public.pizzaiolo;
 	DELETE FROM public.livreur;
 	DELETE FROM public.employe;
+	DELETE FROM public.client_compte;
 	DELETE FROM public.client;
 	DELETE FROM public.pizzeria_stock_accompagnement;
 	DELETE FROM public.pizzeria_stock_ingredient;

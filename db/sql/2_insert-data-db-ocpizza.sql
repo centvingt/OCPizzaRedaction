@@ -259,45 +259,45 @@ BEGIN TRANSACTION;
 		INTO public.client (
 				id, nom, prenom,
 				adresse_voie, adresse_ville, adresse_code_postal,
-				adresse_complement, telephone,
-				email, mot_de_passe
+				adresse_complement, telephone
 			) 
 		VALUES (
 				1, 'Garnier', 'Jérôme', 
 				'12, avenue Gambetta', 'Paris', '75020',
-				'Digicode 1234B', NULL,
-				'jerome@gmail.com', 'azerty'
+				'Digicode 1234B', NULL
 			);
 			
 	INSERT 
 		INTO public.client (
 				id, nom, prenom,
 				adresse_voie, adresse_ville, adresse_code_postal,
-				adresse_complement, telephone,
-				email, mot_de_passe
+				adresse_complement, telephone
 			) 
 		VALUES (
 				2, 'Djamel', 'El-Mani', 
 				'6, avenue de Flandre', 'Paris', '75019',
-				NULL, NULL,
-				'djamel@gmail.com', 'aze123'
+				NULL, NULL
 			);
 
 	INSERT 
 		INTO public.client (
 				id, nom, prenom,
 				adresse_voie, adresse_ville, adresse_code_postal,
-				adresse_complement, telephone,
-				email, mot_de_passe
+				adresse_complement, telephone
 			) 
 		VALUES (
 				3, 'Louise', 'Marionaud', 
 				'18, rue de la Butte-aux-cailles', 'Paris', '75013',
-				NULL, '0677889900',
-				'louise@gmail.com', '123456'
+				NULL, '0677889900'
 			);
 
 	SELECT setval('public.client_id_seq', 3, true);
+
+-- ==================================================================
+-- client_compte
+-- ==================================================================
+	INSERT INTO public.client_compte (client_id, email, mot_de_passe) VALUES (1, 'jerome@gmail.com', 'azerty');
+	INSERT INTO public.client_compte (client_id, email, mot_de_passe) VALUES (2, 'djamel@gmail.com', 'aze123');
 
 -- ==================================================================
 -- employe
