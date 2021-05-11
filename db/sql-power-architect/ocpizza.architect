@@ -672,10 +672,10 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.0" viewportX="0" viewportY="238" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="244" y="697" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB7" x="244" y="361" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB14" x="889" y="113" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
@@ -698,7 +698,7 @@
   <table-pane table-ref="TAB123" x="550" y="617" bgColor="0xc8b7ea" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB130" x="796" y="40" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB135" x="930" y="263" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB142" x="592" y="880" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB142" x="591" y="860" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB148" x="318" y="860" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-link relationship-ref="REL156" pkConnection="0.2903225806451613" fkConnection="0.2610062893081761" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
   <table-link relationship-ref="REL176" pkConnection="0.15960912052117263" fkConnection="0.09310344827586207" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
