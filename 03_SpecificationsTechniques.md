@@ -32,7 +32,7 @@ Le SGBD utilisé est PostgreSQL, un outil libre et gratuit sous licence BSD.
 
 Certains composants de l’API sont couplés à des _web sockets_ pour transmettre au client des données en temps réel lors de leur mise à jour dans la base de données.
 
-## Frontend
+### Frontend
 
 Les applications clientes (site internet et applications mobiles et tablettes pour le client, le livreur et le pizzaïolo) traitent elles-mêmes la majeure partie de la logique métier.
 
