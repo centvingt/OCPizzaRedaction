@@ -126,7 +126,7 @@ Pour mieux nous représenter les principaux acteurs du système que nous mettons
 La lecture du recueil des besoins du client permet d’identifier :
 
 1. des fonctionnalités explicitement demandées par le client, nommées ci-dessous les _fonctionnalités explicites,_
-1. des fonctionnalités implicitement nécessaires au systèmes, ommées ci-dessous les _fonctionnalités implicites._
+1. des fonctionnalités implicitement nécessaires au systèmes, nommées ci-dessous les _fonctionnalités implicites._
 
 ### Carte d’impact
 
@@ -155,7 +155,7 @@ Ces fonctionnalités figurent clairemnt dans le recueil des besoins du client :
 
 #### Fonctionnalités liées au statut d’une commande
 
-Suivre le statut en temps réel des commandes reçues, en préparation et en livraison implique de modifier ce status. Par ailleurs, il est nécessaire à la bonne efficacité du système d’ajouter plusieurs statuts en plus des statuts _Reçue,_ _En préparation_ et _En livraison_ :
+Suivre le statut en temps réel des commandes reçues, en préparation et en livraison implique de modifier ce statut. Par ailleurs, il est nécessaire à la bonne efficacité du système d’ajouter plusieurs statuts en plus des statuts _Reçue,_ _En préparation_ et _En livraison_ :
 
 - Modifier le status d’une commande :
   - Régler le statut d’une commande à “Reçue”
@@ -168,7 +168,7 @@ Suivre le statut en temps réel des commandes reçues, en préparation et en liv
 
 ![Fonctionnalités liées au status d’une commande](./img/figure_implicit-actions-order-status.svg)
 
-#### Fonctionnalité liée à la modificatio et à l’annulation d’une commande
+#### Fonctionnalité liée à la modification et à l’annulation d’une commande
 
 Pour modifier ou annuler une commande, le client consultera un historique de ses commandes et le statut qui leur est associé. La consultation du statut d’une commande permettra au client de savoir s’il peut encore le modifier ou l’annuler.
 
@@ -420,7 +420,7 @@ La logique procédurale du processus de commande est tout d’abord décrite ici
 
 ### Scénario nominal du processus de commande
 
-1. Le système affiche les pizza réalisables,
+1. Le système affiche les pizzas réalisables,
 1. Le client ajoute une ou plusieurs pizzas réalisables à la commande,
 1. Le client valide la commande
 1. Le système propose au client de s’authentifier ou de créer un compte

@@ -103,8 +103,8 @@ Un client qui passe sa commande sur place ou par téléphone pour se faire livre
 
 De même, un client qui passe sa commande sur place et qui la retire sur place ne sera pas enregistré. Dans ce cas :
 
-1. la commande (une instance de la classe Commande) n’aura pas de propriété **client**,
-1. et aucune instance de la classe Client ne sera créée.
+1. la commande (une instance de la classe **Commande**) n’aura pas de propriété **client**,
+1. et aucune instance de la classe **Client** ne sera créée.
 
 ### Les pizzerias, leurs stocks, leurs commandes et leurs employés
 
@@ -114,7 +114,7 @@ Des instances des classes d’association **PizzaIngredient** et **PizzaAccompag
 
 ### Les pizzas et les produits alimentaires
 
-Les classes **Accompagnement** (les boissons, desserts, etc.) et les **Ingredient** (les ingrédients des pizzas) héritent de la classe **Produit**.
+Les classes **Accompagnement** (les boissons, desserts, etc.) et **Ingredient** (les ingrédients des pizzas) héritent de la classe **Produit**.
 
 Un de ces produits est une instance de la classe **Produit** qui a une unité de mesure (à la pièce, au gramme ou au litre) pour le quantifier. Cela permet :
 
